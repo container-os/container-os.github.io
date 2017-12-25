@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://cos.goyak.io/posts/my-2nd-post/</loc>
+    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/posts/my-first-post/</loc>
+    <lastmod>2017-12-22T00:01:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/</loc>
+    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/posts/</loc>
+    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

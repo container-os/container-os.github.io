@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Container OS</title>
+    <link>https://cos.goyak.io/posts/</link>
+    <description>Recent content in Posts on Container OS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Dec 2017 23:32:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://cos.goyak.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My 2nd Post</title>
+      <link>https://cos.goyak.io/posts/my-2nd-post/</link>
+      <pubDate>Sat, 23 Dec 2017 23:32:45 +0800</pubDate>
+      
+      <guid>https://cos.goyak.io/posts/my-2nd-post/</guid>
+      <description>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</description>
+    </item>
+    
+    <item>
+      <title>My First Post-abc</title>
+      <link>https://cos.goyak.io/posts/my-first-post/</link>
+      <pubDate>Fri, 22 Dec 2017 00:01:23 +0800</pubDate>
+      
+      <guid>https://cos.goyak.io/posts/my-first-post/</guid>
+      <description>Test first posts</description>
+    </item>
+    
+  </channel>
+</rss>
