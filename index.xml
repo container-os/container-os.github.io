@@ -29,17 +29,5 @@
       <description>Test first posts</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://cos.goyak.io/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cos.goyak.io/readme/</guid>
-      <description>Easystack Contain OS Docs Documentation site for Easystack Contain OS opensource projects.
-Build To view the documentation site locally, you need to clone this repository:
-git clone -b hugo git@github.com:easystack-cos/easystack-cos.github.io cd yakDocs git worktree add -B gh-pages public origin/gh-pages git worktree add -B master content origin/master git submodule init git submodule update  Then to view the docs in your browser, run Hugo and open up the link:
-$ hugo server Started building sites .</description>
-    </item>
-    
   </channel>
 </rss>
