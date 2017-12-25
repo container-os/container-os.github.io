@@ -1,13 +1,13 @@
-# yak Docs
+# Easystack Contain OS Docs
 
-Documentation site for yak.
+Documentation site for Easystack Contain OS opensource projects.
 
 ## Build
 
 To view the documentation site locally, you need to clone this repository:
 
 ```
-git clone -b hugo git@github.com:goyak/yakDocs.git
+git clone -b hugo git@github.com:easystack-cos/easystack-cos.github.io
 cd yakDocs
 git worktree add -B gh-pages public origin/gh-pages
 git worktree add -B master content origin/master
