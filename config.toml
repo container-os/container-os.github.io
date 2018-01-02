@@ -1,5 +1,5 @@
 baseURL = "https://cos.goyak.io/"
 languageCode = "en-us"
 title = "Container OS"
-theme = "ananke"
+theme = "es-ananke"
 publishDir = "public"
