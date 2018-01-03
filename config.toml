@@ -2,9 +2,17 @@ baseURL = "https://cos.goyak.io/"
 languageCode = "en-us"
 title = "easystack container linux opensource"
 theme = "es-ananke"
+SectionPagesMenu = "main"
 publishDir = "public"
+
 [params]
   favicon = ""
   description = "The last theme you'll ever need. Maybe."
   github = "https://github.com/container-os/"
   env = "dev"
+
+[[menu.main]]
+    name = "Projects"
+    weight = 10
+    identifier = "projects"
+    url = "/projects/"
