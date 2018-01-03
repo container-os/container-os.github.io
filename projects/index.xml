@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>easystack container linux opensource</title>
+    <link>https://cos.goyak.io/projects/</link>
+    <description>Recent content on easystack container linux opensource</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://cos.goyak.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

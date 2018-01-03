@@ -1,42 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Easystack container Linux on easystack container linux opensource</title>
-    <link>https://cos.goyak.io/</link>
-    <description>Recent content in Easystack container Linux on easystack container linux opensource</description>
+    <title>yak: yak application keeper on easystack container linux opensource</title>
+    <link>https://cos.goyak.io/projects/yak/</link>
+    <description>Recent content in yak: yak application keeper on easystack container linux opensource</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2017 23:32:45 +0800</lastBuildDate>
     
-	<atom:link href="https://cos.goyak.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cos.goyak.io/projects/yak/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My 2nd Post</title>
-      <link>https://cos.goyak.io/posts/my-2nd-post/</link>
-      <pubDate>Sat, 23 Dec 2017 23:32:45 +0800</pubDate>
-      
-      <guid>https://cos.goyak.io/posts/my-2nd-post/</guid>
-      <description>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</description>
-    </item>
-    
-    <item>
-      <title>My First Post-abc</title>
-      <link>https://cos.goyak.io/posts/my-first-post/</link>
-      <pubDate>Fri, 22 Dec 2017 00:01:23 +0800</pubDate>
-      
-      <guid>https://cos.goyak.io/posts/my-first-post/</guid>
-      <description>Test first posts</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cos.goyak.io/contribute/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cos.goyak.io/contribute/</guid>
-      <description>How to contribute</description>
-    </item>
     
     <item>
       <title></title>
@@ -240,24 +212,6 @@ Ostree 特性  Transactional upgrades and rollback for the system Replicating co
       
       <guid>https://cos.goyak.io/projects/yak/docs/use-case/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://cos.goyak.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cos.goyak.io/contact/</guid>
-      <description> Your Name Email Address An email address is required.  Message   </description>
-    </item>
-    
-    <item>
-      <title>Easystack container Linux</title>
-      <link>https://cos.goyak.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cos.goyak.io/about/</guid>
-      <description>easystack container Linux是一款基于原子项目Project Atomic的轻量级容器操作系统， 主要目标是面向云平台的虚拟机操作系统。easystack container linux是以ESCloud Linux为基础设计的， 不仅继承了ESCloud Linux的高效性和稳定性，而且相对普通虚拟机采用更精简的kernel内核和更丰富的系统工具， 使系统运行更快，更高效。完全继承了atomic的本身的特性，包括快速部署和OS版本升级回退。 easystack container Linux专门为提高容器效率而定制，使其成为云环境的kubenetes/Docker运行环境的最佳选择。</description>
     </item>
     
   </channel>
