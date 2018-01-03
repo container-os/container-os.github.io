@@ -4,12 +4,15 @@
       {{ .Content }}
     </div>
   </article>
-  <div class="mw8 center">
+  <div class="mw9 center">
     <section class="flex-ns flex-wrap justify-around mt5">
       {{ range  .Sections }}
         <div class="relative w-100  mb4 bg-white">
-{{ .Params.ProjectURL }}
-          <a href="{{ .Params.ProjectURL }}">github</a>
+	<h2>{{ .Title }}
+        <a href="{{ .Params.ProjectURL }}" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+          {{ partial "svg/github.svg" (dict "size" 30) }} 
+        </a>
+	</h2>
           <div class="nested-links f5 lh-copy nested-copy-line-height">
         {{ .Content }}
           </div>
