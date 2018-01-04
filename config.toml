@@ -5,6 +5,7 @@ theme = "es-ananke"
 publishDir = "public"
 SectionPagesMenu = "main"
 mainSections = ["posts"]
+hasCJKLanguage = true
 
 [params]
   favicon = ""
