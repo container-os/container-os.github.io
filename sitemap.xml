@@ -26,6 +26,10 @@
   </url>
   
   <url>
+    <loc>https://cos.goyak.io/projects/initramfs/</loc>
+  </url>
+  
+  <url>
     <loc>https://cos.goyak.io/projects/linux-kernel/</loc>
   </url>
   

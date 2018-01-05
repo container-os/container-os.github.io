@@ -48,6 +48,17 @@
     </item>
     
     <item>
+      <title>Container-OS specific initramfs</title>
+      <link>https://cos.goyak.io/projects/initramfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/initramfs/</guid>
+      <description>step1: init filesystem mkdir -p {dev,proc,run,sysroot,sys}
+step2: initramfs compress find -P . | grep -Ev &amp;ldquo;.git|README.md&amp;rdquo; |cpio -o -H newc|gzip &amp;gt; ./initramfs.cpio.gz
+step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/</description>
+    </item>
+    
+    <item>
       <title>Container-OS specific kernel</title>
       <link>https://cos.goyak.io/projects/linux-kernel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
