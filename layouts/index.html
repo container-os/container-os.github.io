@@ -38,7 +38,7 @@
 	<h3>Projects</h3>
         {{ with .Site.GetPage "section" "projects" }}
 	  <ul>
-          {{ range  .Sections }}
+          {{ range .Pages }}
           <div class="relative w-100 mb4">
 		  <li><a href="{{ .Params.ProjectURL }}">{{ .Title }}</a></li>
           </div>

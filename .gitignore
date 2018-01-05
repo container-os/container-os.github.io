@@ -1,3 +1,6 @@
-public
 # ignore document site item...
 /public
+
+# ignore project index docs
+/content/projects/*.md
+/content/projects/!_index.md

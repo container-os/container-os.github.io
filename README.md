@@ -1,3 +1,5 @@
+title: xxx
+
 # Easystack Contain OS Docs
 
 Documentation site for Easystack Contain OS opensource projects.
