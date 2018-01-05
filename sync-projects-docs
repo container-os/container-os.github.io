@@ -10,6 +10,13 @@ projects = [
      "target": "linux-kernel.md"
   },
   {
+     "title": "Container-OS specific initramfs",
+     "repo": "container-os/initramfs",
+     "branch": "master",
+     "file": "README.md",
+     "target": "initramfs.md"
+  },
+  {
      "title": "Yak application keeper",
      "repo": "goyak/yak",
      "branch": "docs",
