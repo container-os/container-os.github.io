@@ -10,5 +10,26 @@
 	<atom:link href="https://cos.goyak.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Container-OS specific kernel</title>
+      <link>https://cos.goyak.io/projects/linux-kernel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/linux-kernel/</guid>
+      <description>Linux kernel release 4.x http://kernel.org/
+These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+WHAT IS LINUX?
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.</description>
+    </item>
+    
+    <item>
+      <title>yak: yak application keeper</title>
+      <link>https://cos.goyak.io/projects/yak/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/yak/</guid>
+      <description>Image主的解决方案没有乡异性问题, 然而这类方案通常并没有配置的弹性. 如何操作该应用也必须透过阅读README后才能理解. yak希望可以提</description>
+    </item>
+    
   </channel>
 </rss>

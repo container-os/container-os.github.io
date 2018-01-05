@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Easystack container linux opensource  | Container-OS specific kernel</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.32-DEV" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://cos.goyak.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Container-OS specific kernel" />
+<meta property="og:description" content="Linux kernel release 4.x http://kernel.org/
+These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+WHAT IS LINUX?
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cos.goyak.io/projects/linux-kernel/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Container-OS specific kernel">
+<meta itemprop="description" content="Linux kernel release 4.x http://kernel.org/
+These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+WHAT IS LINUX?
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.">
+
+
+
+<meta itemprop="wordCount" content="2712">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Container-OS specific kernel"/>
+<meta name="twitter:description" content="Linux kernel release 4.x http://kernel.org/
+These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+WHAT IS LINUX?
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://cos.goyak.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Easystack container linux opensource
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contribute/" title="Contribute page">
+              Contribute
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="https://github.com/container-os/" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          PROJECTS
+        </p>
+        <h1 class="f1">
+          Container-OS specific kernel
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        <p>Linux kernel release 4.x <a href="http://kernel.org/">http://kernel.org/</a></p>
+
+<p>These are the release notes for Linux version 4.  Read them carefully,
+as they tell you what this is all about, explain how to install the
+kernel, and what to do if something goes wrong.</p>
+
+<p>WHAT IS LINUX?</p>
+
+<p>Linux is a clone of the operating system Unix, written from scratch by
+  Linus Torvalds with assistance from a loosely-knit team of hackers across
+  the Net. It aims towards POSIX and Single UNIX Specification compliance.</p>
+
+<p>It has all the features you would expect in a modern fully-fledged Unix,
+  including true multitasking, virtual memory, shared libraries, demand
+  loading, shared copy-on-write executables, proper memory management,
+  and multistack networking including IPv4 and IPv6.</p>
+
+<p>It is distributed under the GNU General Public License - see the
+  accompanying COPYING file for more details.</p>
+
+<p>ON WHAT HARDWARE DOES IT RUN?</p>
+
+<p>Although originally developed first for 32-bit x86-based PCs (386 or higher),
+  today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and
+  UltraSPARC, Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell,
+  IBM S/390, MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS,
+  Xtensa, Tilera TILE, AVR32, ARC and Renesas M32R architectures.</p>
+
+<p>Linux is easily portable to most general-purpose 32- or 64-bit architectures
+  as long as they have a paged memory management unit (PMMU) and a port of the
+  GNU C compiler (gcc) (part of The GNU Compiler Collection, GCC). Linux has
+  also been ported to a number of architectures without a PMMU, although
+  functionality is then obviously somewhat limited.
+  Linux has also been ported to itself. You can now run the kernel as a
+  userspace application - this is called UserMode Linux (UML).</p>
+
+<p>DOCUMENTATION:</p>
+
+<ul>
+<li><p>There is a lot of documentation available both in electronic form on
+the Internet and in books, both Linux-specific and pertaining to
+general UNIX questions.  I&rsquo;d recommend looking into the documentation
+subdirectories on any Linux FTP site for the LDP (Linux Documentation
+Project) books.  This README is not meant to be documentation on the
+system: there are much better sources available.</p></li>
+
+<li><p>There are various README files in the Documentation/ subdirectory:
+these typically contain kernel-specific installation notes for some
+drivers for example. See Documentation/00-INDEX for a list of what
+is contained in each file.  Please read the Changes file, as it
+contains information about the problems, which may result by upgrading
+your kernel.</p></li>
+
+<li><p>The Documentation/DocBook/ subdirectory contains several guides for
+kernel developers and users.  These guides can be rendered in a
+number of formats:  PostScript (.ps), PDF, HTML, &amp; man-pages, among others.
+After installation, &ldquo;make psdocs&rdquo;, &ldquo;make pdfdocs&rdquo;, &ldquo;make htmldocs&rdquo;,
+or &ldquo;make mandocs&rdquo; will render the documentation in the requested format.</p></li>
+</ul>
+
+<p>INSTALLING the kernel source:</p>
+
+<ul>
+<li><p>If you install the full sources, put the kernel tarball in a
+directory where you have permissions (eg. your home directory) and
+unpack it:</p>
+
+<p>xz -cd linux-4.X.tar.xz | tar xvf -</p></li>
+</ul>
+
+<p>Replace &ldquo;X&rdquo; with the version number of the latest kernel.</p>
+
+<p>Do NOT use the /usr/src/linux area! This area has a (usually
+   incomplete) set of kernel headers that are used by the library header
+   files.  They should match the library, and not get messed up by
+   whatever the kernel-du-jour happens to be.</p>
+
+<ul>
+<li><p>You can also upgrade between 4.x releases by patching.  Patches are
+distributed in the xz format.  To install by patching, get all the
+newer patch files, enter the top level directory of the kernel source
+(linux-4.X) and execute:</p>
+
+<p>xz -cd ../patch-4.x.xz | patch -p1</p></li>
+</ul>
+
+<p>Replace &ldquo;x&rdquo; for all versions bigger than the version &ldquo;X&rdquo; of your current
+   source tree, _in<em>order</em>, and you should be ok.  You may want to remove
+   the backup files (some-file-name~ or some-file-name.orig), and make sure
+   that there are no failed patches (some-file-name# or some-file-name.rej).
+   If there are, either you or I have made a mistake.</p>
+
+<p>Unlike patches for the 4.x kernels, patches for the 4.x.y kernels
+   (also known as the -stable kernels) are not incremental but instead apply
+   directly to the base 4.x kernel.  For example, if your base kernel is 4.0
+   and you want to apply the 4.0.3 patch, you must not first apply the 4.0.1
+   and 4.0.2 patches. Similarly, if you are running kernel version 4.0.2 and
+   want to jump to 4.0.3, you must first reverse the 4.0.2 patch (that is,
+   patch -R) <em>before</em> applying the 4.0.3 patch. You can read more on this in
+   Documentation/applying-patches.txt</p>
+
+<p>Alternatively, the script patch-kernel can be used to automate this
+   process.  It determines the current kernel version and applies any
+   patches found.</p>
+
+<pre><code> linux/scripts/patch-kernel linux
+</code></pre>
+
+<p>The first argument in the command above is the location of the
+   kernel source.  Patches are applied from the current directory, but
+   an alternative directory can be specified as the second argument.</p>
+
+<ul>
+<li><p>Make sure you have no stale .o files and dependencies lying around:</p>
+
+<p>cd linux
+ make mrproper</p></li>
+</ul>
+
+<p>You should now have the sources correctly installed.</p>
+
+<p>SOFTWARE REQUIREMENTS</p>
+
+<p>Compiling and running the 4.x kernels requires up-to-date
+   versions of various software packages.  Consult
+   Documentation/Changes for the minimum version numbers required
+   and how to get updates for these packages.  Beware that using
+   excessively old versions of these packages can cause indirect
+   errors that are very difficult to track down, so don&rsquo;t assume that
+   you can just update packages when obvious problems arise during
+   build or operation.</p>
+
+<p>BUILD directory for the kernel:</p>
+
+<p>When compiling the kernel, all output files will per default be
+   stored together with the kernel source code.
+   Using the option &ldquo;make O=output/dir&rdquo; allow you to specify an alternate
+   place for the output files (including .config).
+   Example:</p>
+
+<pre><code> kernel source code: /usr/src/linux-4.X
+ build directory:    /home/name/build/kernel
+</code></pre>
+
+<p>To configure and build the kernel, use:</p>
+
+<pre><code> cd /usr/src/linux-4.X
+ make O=/home/name/build/kernel menuconfig
+ make O=/home/name/build/kernel
+ sudo make O=/home/name/build/kernel modules_install install
+</code></pre>
+
+<p>Please note: If the &lsquo;O=output/dir&rsquo; option is used, then it must be
+   used for all invocations of make.</p>
+
+<p>CONFIGURING the kernel:</p>
+
+<p>Do not skip this step even if you are only upgrading one minor
+   version.  New configuration options are added in each release, and
+   odd problems will turn up if the configuration files are not set up
+   as expected.  If you want to carry your existing configuration to a
+   new version with minimal work, use &ldquo;make oldconfig&rdquo;, which will
+   only ask you for the answers to new questions.</p>
+
+<ul>
+<li><p>Alternative configuration commands are:</p>
+
+<p>&ldquo;make config&rdquo;      Plain text interface.</p>
+
+<p>&ldquo;make menuconfig&rdquo;  Text based color menus, radiolists &amp; dialogs.</p>
+
+<p>&ldquo;make nconfig&rdquo;     Enhanced text based color menus.</p>
+
+<p>&ldquo;make xconfig&rdquo;     X windows (Qt) based configuration tool.</p>
+
+<p>&ldquo;make gconfig&rdquo;     X windows (GTK+) based configuration tool.</p>
+
+<p>&ldquo;make oldconfig&rdquo;   Default all questions based on the contents of
+                    your existing ./.config file and asking about
+                    new config symbols.</p>
+
+<p>&ldquo;make silentoldconfig&rdquo;
+                    Like above, but avoids cluttering the screen
+                    with questions already answered.
+                    Additionally updates the dependencies.</p>
+
+<p>&ldquo;make olddefconfig&rdquo;
+                    Like above, but sets new symbols to their default
+                    values without prompting.</p>
+
+<p>&ldquo;make defconfig&rdquo;   Create a ./.config file by using the default
+                    symbol values from either arch/$ARCH/defconfig
+                    or arch/$ARCH/configs/${PLATFORM}_defconfig,
+                    depending on the architecture.</p>
+
+<p>&ldquo;make ${PLATFORM}_defconfig&rdquo;
+                    Create a ./.config file by using the default
+                    symbol values from
+                    arch/$ARCH/configs/${PLATFORM}_defconfig.
+                    Use &ldquo;make help&rdquo; to get a list of all available
+                    platforms of your architecture.</p>
+
+<p>&ldquo;make allyesconfig&rdquo;
+                    Create a ./.config file by setting symbol
+                    values to &lsquo;y&rsquo; as much as possible.</p>
+
+<p>&ldquo;make allmodconfig&rdquo;
+                    Create a ./.config file by setting symbol
+                    values to &rsquo;m&rsquo; as much as possible.</p>
+
+<p>&ldquo;make allnoconfig&rdquo; Create a ./.config file by setting symbol
+                    values to &lsquo;n&rsquo; as much as possible.</p>
+
+<p>&ldquo;make randconfig&rdquo;  Create a ./.config file by setting symbol
+                    values to random values.</p>
+
+<p>&ldquo;make localmodconfig&rdquo; Create a config based on current config and
+                       loaded modules (lsmod). Disables any module
+                       option that is not needed for the loaded modules.</p>
+
+<pre><code>                   To create a localmodconfig for another machine,
+                   store the lsmod of that machine into a file
+                   and pass it in as a LSMOD parameter.
+
+           target$ lsmod &gt; /tmp/mylsmod
+           target$ scp /tmp/mylsmod host:/tmp
+
+           host$ make LSMOD=/tmp/mylsmod localmodconfig
+
+                   The above also works when cross compiling.
+</code></pre>
+
+<p>&ldquo;make localyesconfig&rdquo; Similar to localmodconfig, except it will convert
+                       all module options to built in (=y) options.</p></li>
+</ul>
+
+<p>You can find more information on using the Linux kernel config tools
+   in Documentation/kbuild/kconfig.txt.</p>
+
+<ul>
+<li><p>NOTES on &ldquo;make config&rdquo;:</p>
+
+<ul>
+<li><p>Having unnecessary drivers will make the kernel bigger, and can
+under some circumstances lead to problems: probing for a
+nonexistent controller card may confuse your other controllers</p></li>
+
+<li><p>Compiling the kernel with &ldquo;Processor type&rdquo; set higher than 386
+will result in a kernel that does NOT work on a 386.  The
+kernel will detect this on bootup, and give up.</p></li>
+
+<li><p>A kernel with math-emulation compiled in will still use the
+coprocessor if one is present: the math emulation will just
+never get used in that case.  The kernel will be slightly larger,
+but will work on different machines regardless of whether they
+have a math coprocessor or not.</p></li>
+
+<li><p>The &ldquo;kernel hacking&rdquo; configuration details usually result in a
+bigger or slower kernel (or both), and can even make the kernel
+less stable by configuring some routines to actively try to
+break bad code to find kernel problems (kmalloc()).  Thus you
+should probably answer &lsquo;n&rsquo; to the questions for &ldquo;development&rdquo;,
+&ldquo;experimental&rdquo;, or &ldquo;debugging&rdquo; features.</p></li>
+</ul></li>
+</ul>
+
+<p>COMPILING the kernel:</p>
+
+<ul>
+<li>Make sure you have at least gcc 3.2 available.
+For more information, refer to Documentation/Changes.</li>
+</ul>
+
+<p>Please note that you can still run a.out user programs with this kernel.</p>
+
+<ul>
+<li>Do a &ldquo;make&rdquo; to create a compressed kernel image. It is also
+possible to do &ldquo;make install&rdquo; if you have lilo installed to suit the
+kernel makefiles, but you may want to check your particular lilo setup first.</li>
+</ul>
+
+<p>To do the actual install, you have to be root, but none of the normal
+   build should require that. Don&rsquo;t take the name of root in vain.</p>
+
+<ul>
+<li><p>If you configured any of the parts of the kernel as `modules&rsquo;, you
+will also have to do &ldquo;make modules_install&rdquo;.</p></li>
+
+<li><p>Verbose kernel compile/build output:</p></li>
+</ul>
+
+<p>Normally, the kernel build system runs in a fairly quiet mode (but not
+   totally silent).  However, sometimes you or other kernel developers need
+   to see compile, link, or other commands exactly as they are executed.
+   For this, use &ldquo;verbose&rdquo; build mode.  This is done by inserting
+   &ldquo;V=1&rdquo; in the &ldquo;make&rdquo; command.  E.g.:</p>
+
+<pre><code> make V=1 all
+</code></pre>
+
+<p>To have the build system also tell the reason for the rebuild of each
+   target, use &ldquo;V=2&rdquo;.  The default is &ldquo;V=0&rdquo;.</p>
+
+<ul>
+<li>Keep a backup kernel handy in case something goes wrong.  This is
+especially true for the development releases, since each new release
+contains new code which has not been debugged.  Make sure you keep a
+backup of the modules corresponding to that kernel, as well.  If you
+are installing a new kernel with the same version number as your
+working kernel, make a backup of your modules directory before you
+do a &ldquo;make modules_install&rdquo;.</li>
+</ul>
+
+<p>Alternatively, before compiling, use the kernel config option
+   &ldquo;LOCALVERSION&rdquo; to append a unique suffix to the regular kernel version.
+   LOCALVERSION can be set in the &ldquo;General Setup&rdquo; menu.</p>
+
+<ul>
+<li><p>In order to boot your new kernel, you&rsquo;ll need to copy the kernel
+image (e.g. &hellip;/linux/arch/i386/boot/bzImage after compilation)
+to the place where your regular bootable kernel is found.</p></li>
+
+<li><p>Booting a kernel directly from a floppy without the assistance of a
+bootloader such as LILO, is no longer supported.</p></li>
+</ul>
+
+<p>If you boot Linux from the hard drive, chances are you use LILO, which
+   uses the kernel image as specified in the file /etc/lilo.conf.  The
+   kernel image file is usually /vmlinuz, /boot/vmlinuz, /bzImage or
+   /boot/bzImage.  To use the new kernel, save a copy of the old image
+   and copy the new image over the old one.  Then, you MUST RERUN LILO
+   to update the loading map!! If you don&rsquo;t, you won&rsquo;t be able to boot
+   the new kernel image.</p>
+
+<p>Reinstalling LILO is usually a matter of running /sbin/lilo.
+   You may wish to edit /etc/lilo.conf to specify an entry for your
+   old kernel image (say, /vmlinux.old) in case the new one does not
+   work.  See the LILO docs for more information.</p>
+
+<p>After reinstalling LILO, you should be all set.  Shutdown the system,
+   reboot, and enjoy!</p>
+
+<p>If you ever need to change the default root device, video mode,
+   ramdisk size, etc.  in the kernel image, use the &lsquo;rdev&rsquo; program (or
+   alternatively the LILO boot options when appropriate).  No need to
+   recompile the kernel to change these parameters.</p>
+
+<ul>
+<li>Reboot with the new kernel and enjoy.</li>
+</ul>
+
+<p>IF SOMETHING GOES WRONG:</p>
+
+<ul>
+<li><p>If you have problems that seem to be due to kernel bugs, please check
+the file MAINTAINERS to see if there is a particular person associated
+with the part of the kernel that you are having trouble with. If there
+isn&rsquo;t anyone listed there, then the second best thing is to mail
+them to me (torvalds@linux-foundation.org), and possibly to any other
+relevant mailing-list or to the newsgroup.</p></li>
+
+<li><p>In all bug-reports, <em>please</em> tell what kernel you are talking about,
+how to duplicate the problem, and what your setup is (use your common
+sense).  If the problem is new, tell me so, and if the problem is
+old, please try to tell me when you first noticed it.</p></li>
+
+<li><p>If the bug results in a message like</p>
+
+<p>unable to handle kernel paging request at address C0000010
+ Oops: 0002
+ EIP:   0010:XXXXXXXX
+ eax: xxxxxxxx   ebx: xxxxxxxx   ecx: xxxxxxxx   edx: xxxxxxxx
+ esi: xxxxxxxx   edi: xxxxxxxx   ebp: xxxxxxxx
+ ds: xxxx  es: xxxx  fs: xxxx  gs: xxxx
+ Pid: xx, process nr: xx
+ xx xx xx xx xx xx xx xx xx xx</p></li>
+</ul>
+
+<p>or similar kernel debugging information on your screen or in your
+   system log, please duplicate it <em>exactly</em>.  The dump may look
+   incomprehensible to you, but it does contain information that may
+   help debugging the problem.  The text above the dump is also
+   important: it tells something about why the kernel dumped code (in
+   the above example, it&rsquo;s due to a bad kernel pointer). More information
+   on making sense of the dump is in Documentation/oops-tracing.txt</p>
+
+<ul>
+<li><p>If you compiled the kernel with CONFIG_KALLSYMS you can send the dump
+as is, otherwise you will have to use the &ldquo;ksymoops&rdquo; program to make
+sense of the dump (but compiling with CONFIG_KALLSYMS is usually preferred).
+This utility can be downloaded from
+<a href="ftp://ftp">ftp://ftp</a>.<country>.kernel.org/pub/linux/utils/kernel/ksymoops/ .
+Alternatively, you can do the dump lookup by hand:</p></li>
+
+<li><p>In debugging dumps like the above, it helps enormously if you can
+look up what the EIP value means.  The hex value as such doesn&rsquo;t help
+me or anybody else very much: it will depend on your particular
+kernel setup.  What you should do is take the hex value from the EIP
+line (ignore the &ldquo;0010:&ldquo;), and look it up in the kernel namelist to
+see which kernel function contains the offending address.</p></li>
+</ul>
+
+<p>To find out the kernel function name, you&rsquo;ll need to find the system
+   binary associated with the kernel that exhibited the symptom.  This is
+   the file &lsquo;linux/vmlinux&rsquo;.  To extract the namelist and match it against
+   the EIP from the kernel crash, do:</p>
+
+<pre><code> nm vmlinux | sort | less
+</code></pre>
+
+<p>This will give you a list of kernel addresses sorted in ascending
+   order, from which it is simple to find the function that contains the
+   offending address.  Note that the address given by the kernel
+   debugging messages will not necessarily match exactly with the
+   function addresses (in fact, that is very unlikely), so you can&rsquo;t
+   just &lsquo;grep&rsquo; the list: the list will, however, give you the starting
+   point of each kernel function, so by looking for the function that
+   has a starting address lower than the one you are searching for but
+   is followed by a function with a higher address you will find the one
+   you want.  In fact, it may be a good idea to include a bit of
+   &ldquo;context&rdquo; in your problem report, giving a few lines around the
+   interesting one.</p>
+
+<p>If you for some reason cannot do the above (you have a pre-compiled
+   kernel image or similar), telling me as much about your setup as
+   possible will help.  Please read the REPORTING-BUGS document for details.</p>
+
+<ul>
+<li>Alternatively, you can use gdb on a running kernel. (read-only; i.e. you
+cannot change values or set break points.) To do this, first compile the
+kernel with -g; edit arch/i386/Makefile appropriately, then do a &ldquo;make
+clean&rdquo;. You&rsquo;ll also need to enable CONFIG_PROC_FS (via &ldquo;make config&rdquo;).</li>
+</ul>
+
+<p>After you&rsquo;ve rebooted with the new kernel, do &ldquo;gdb vmlinux /proc/kcore&rdquo;.
+   You can now use all the usual gdb commands. The command to look up the
+   point where your system crashed is &ldquo;l *0xXXXXXXXX&rdquo;. (Replace the XXXes
+   with the EIP value.)</p>
+
+<p>gdb&rsquo;ing a non-running kernel currently fails because gdb (wrongly)
+   disregards the starting offset for which the kernel is compiled.</p>
+
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        1 More Projects
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/linux-kernel/" class="link ph2 pv2 db black o-50">
+            Container-OS specific kernel
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/yak/" class="link ph2 pv2 db black">
+            yak: yak application keeper
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+    <div>
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cos.goyak.io/" >
+        &copy; 2018 Easystack container linux opensource
+      </a>
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://easystack.cn">
+        Project sponsored by EasyStack Inc.
+      </a>
+  </div>
+  
+
+
+
+
+
+
+
+  <a href="https://github.com/container-os/" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://cos.goyak.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>
