@@ -1,43 +1,40 @@
 #!/usr/bin/env python
+import os
 import subprocess
+import requests
+import re
+import yaml
 
-projects = [
-  {
-     "title": "Container-OS specific kernel",
-     "repo": "container-os/linux",
-     "branch": "easystack",
-     "file": "README",
-     "target": "linux-kernel.md"
-  },
-  {
-     "title": "Container-OS specific initramfs",
-     "repo": "container-os/initramfs",
-     "branch": "master",
-     "file": "README.md",
-     "target": "initramfs.md"
-  },
-  {
-     "title": "Yak application keeper",
-     "repo": "goyak/yak",
-     "branch": "docs",
-     "file": "_index.md",
-     "target": "yak.md"
-  },
-]
 
-for p in projects:
-    url = "https://raw.githubusercontent.com/{repo}/{branch}/{file}".format(**p)
-    target = "content/projects/{target}".format(**p)
-    header = """---
-title: {title}
-ProjectURL: https://github.com/{repo}
----
-""".format(**p)
+def load_md_meta(raw_data):
+    data = raw_data.split("---", 2)
+    if len(data) == 3 and data[0] == "":
+        return yaml.load(data[1]), data[2]
+    return None, raw_data
 
-    subprocess.call(['curl', url,'-o', target])
 
-    with open(target, "r+") as f:
-        s = f.read()
-        if not (s[0:3] == "+++" or s[0:3] == "---"):
-           f.seek(0)
-           f.write(header+"\n"+s)
+for (dirpath, dirnames, filenames) in os.walk('content'):
+    for filename in filenames:
+        if filename[-3:] != ".md":
+            continue
+        filename = os.path.join(dirpath, filename)
+        print("checking file: {}".format(filename))
+        with open(filename, "r") as f:
+            (meta, old_raw) = load_md_meta(f.read())
+        if meta == None or 'raw' not in meta:
+            continue
+
+        print("loading data from: {}".format(meta['raw']))
+        conn = requests.get(meta['raw'])
+        (_, raw) = load_md_meta(conn.content)
+
+        print("updating file: {}".format(filename))
+
+        meta['zzzNote'] = "do not edit the file directly,\
+ edit the raw data instead of it"
+        with open(filename, "w") as f:
+            yaml_meta = yaml.dump(meta, default_flow_style=False)
+            # remove comments
+            # |> [shawn]
+            raw = re.sub(r'\n>\s\[.*\].*\n', '', raw, flags=re.IGNORECASE)
+            f.write("---\n{}---\n{}".format(yaml_meta, raw))
