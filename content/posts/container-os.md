@@ -5,6 +5,7 @@ zzzNote: do not edit the file directly, edit the raw data instead of it
 ---
 # Container OS 分析比较
 
+hello
 
 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应用的难度，现在企业都可以自行给客户部署容器应用并且需求越来越大，传统的操作系统针对部署容器又显得太厚重，container OS正是瞄准大量部署容器而生的轻量级操作系统。 面对container OS的强烈需求，多家系统厂商都趁此机会纷纷的都推出了自己的container OS 版本。大家肯定对他们很感兴趣，让我们来看看这些OS有什么特点和不同。让我们来看看这些OS有什么特点和不同。
 ## 目前几大container OS 版本
