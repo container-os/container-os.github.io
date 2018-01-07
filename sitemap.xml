@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cos.goyak.io/posts/my-2nd-post/</loc>
-    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/posts/my-first-post/</loc>
-    <lastmod>2017-12-22T00:01:23+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cos.goyak.io/contribute/</loc>
   </url>
   
@@ -26,6 +16,10 @@
   </url>
   
   <url>
+    <loc>https://cos.goyak.io/posts/container-os/</loc>
+  </url>
+  
+  <url>
     <loc>https://cos.goyak.io/projects/initramfs/</loc>
   </url>
   
@@ -34,18 +28,20 @@
   </url>
   
   <url>
+    <loc>https://cos.goyak.io/posts/es-cos/</loc>
+  </url>
+  
+  <url>
     <loc>https://cos.goyak.io/about/</loc>
   </url>
   
   <url>
     <loc>https://cos.goyak.io/</loc>
-    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cos.goyak.io/posts/</loc>
-    <lastmod>2017-12-23T23:32:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   

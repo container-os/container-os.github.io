@@ -6,27 +6,26 @@
     <description>Recent content in Posts on Easystack container linux opensource</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2017 23:32:45 +0800</lastBuildDate>
     
 	<atom:link href="https://cos.goyak.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My 2nd Post</title>
-      <link>https://cos.goyak.io/posts/my-2nd-post/</link>
-      <pubDate>Sat, 23 Dec 2017 23:32:45 +0800</pubDate>
+      <title>Container OS Quickview</title>
+      <link>https://cos.goyak.io/posts/container-os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/my-2nd-post/</guid>
-      <description>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</description>
+      <guid>https://cos.goyak.io/posts/container-os/</guid>
+      <description>Container OS 分析比较 hello 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应</description>
     </item>
     
     <item>
-      <title>My First Post-abc</title>
-      <link>https://cos.goyak.io/posts/my-first-post/</link>
-      <pubDate>Fri, 22 Dec 2017 00:01:23 +0800</pubDate>
+      <title>Easystack Container OS</title>
+      <link>https://cos.goyak.io/posts/es-cos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/my-first-post/</guid>
-      <description>Test first posts</description>
+      <guid>https://cos.goyak.io/posts/es-cos/</guid>
+      <description>深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes 的出现,简化了大规模部署容器应用的难度</description>
     </item>
     
   </channel>
