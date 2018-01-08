@@ -5,9 +5,10 @@ zzzNote: do not edit the file directly, edit the raw data instead of it
 ---
 # Container OS 分析比较
 
-hello
 
 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应用的难度，现在企业都可以自行给客户部署容器应用并且需求越来越大，传统的操作系统针对部署容器又显得太厚重，container OS正是瞄准大量部署容器而生的轻量级操作系统。 面对container OS的强烈需求，多家系统厂商都趁此机会纷纷的都推出了自己的container OS 版本。大家肯定对他们很感兴趣，让我们来看看这些OS有什么特点和不同。让我们来看看这些OS有什么特点和不同。
+
+
 ## 目前几大container OS 版本
 
 ### Core OS
@@ -22,9 +23,7 @@ Canonical推出Snappy Ubuntu Core，可搭載在Ubuntu Core的裝置上使用。
 
 ### Atomic host
 
-Atomic host 是通过centos，fedora和RHEL的上游rpm包构建的轻量级操作系统，
-
-并支持‘原子’的升级和回滚，用户可以选择不同的发行版本作为基础来管理你的机器。OS内置了rpm-ostree的事务更新工具，它总是保留一份旧版本的操作系统用作回退，类似于CoreOS。Atomic host采用selinux技术来保护容器。Atomic host是通过了整合现有可信赖的技术来实现了容器操作系统。
+Atomic host 是通过centos，fedora和RHEL的上游rpm包构建的轻量级操作系统，并支持‘原子’的升级和回滚，用户可以选择不同的发行版本作为基础来管理你的机器。OS内置了rpm-ostree的事务更新工具，它总是保留一份旧版本的操作系统用作回退，类似于CoreOS。Atomic host采用selinux技术来保护容器。Atomic host是通过了整合现有可信赖的技术来实现了容器操作系统。
 
 
 ## atomic host的实现原理
@@ -94,31 +93,12 @@ Server 端 repo 示意图:
  圆圈对应每个object 文件， 假设1,4,7 代表commit类型， {1，2，3} 代表OS version1, {4,5,6} 代表OS version 2. {7,2,6} 代表OS version 3.
 
  
-
-
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
+![post1-1.png](https://cos.goyak.io/images/post1-1.png)
  
 
 那么在client 从OS version 1 upgrade 到version 3 时只需要下载object 7和6就可以了。
 
-
-
-
-
-
- 
+![post1-2.png](https://cos.goyak.io/images/post1-2.png)
 
  
 
@@ -128,30 +108,15 @@ Server 端 repo 示意图:
 
 而对于client端来说， 由于OS大部分数据是readonly，如果client端需要添加第3方包怎么办， rpm-ostree提供了安装或卸载第3方包的功能，通过rpm-ostree install/uninstall包名来实现。由于是根据当前OS版本做更新，所有在client端就会先checkout一份OS base版本到临时目录， 然后通过libdnf库读取本地/etc/yum.repos.d/的repo数据下载包和依赖的包，然后将包逐个更新到新的cache repo中， 也称为pkgcache-repo， 这个repo会在默认存储在os repo路径下的extensions/rpmostree/pkgcache目录， 然后根据rpmdb计算每个包的添加还是删除，最后将包在pkgcache-repo的commit-id对应的tree更新到系统repo文件目录中，这里也是采用hardlink技术，然后根据新的OS目录，组建新的commit数据将整个OS更新到client的repo中，生成新系统的commit。
 
- 
-
  例如： {1，2，3} 代表OS version1,  安装包包括{4，5}, 安装的时候会先更新到 pkgcache repo中， 然后rpm-ostree 会将{1,2,3,4,5} 组成新的commit 到OS version 2.
 
  
+![post1-3.png](https://cos.goyak.io/images/post1-3.png)
 
  
 
  
 
- 
-
-
-
-
-
-
- 
-
- 
-
- 
-
- 
 
 我们往往需要考虑到容器安全的问题，容器安全无非分两类：保护host不受影响和容器相互之间不受影响。在atomic host中，采用的是selinux来与docker结合来保护容器的以上2个方面的安全。我们来看看selinux如果是如何保护容器的。
 
@@ -165,7 +130,7 @@ Enforcement类型是基于进程的规则，受限的容器进程默认svirt_lxc
 
  
 
- 
+![post1-4.png](https://cos.goyak.io/images/post1-4.png)
 
  
 
@@ -197,29 +162,15 @@ Enforcement类型是基于进程的规则，受限的容器进程默认svirt_lxc
 
  
 
- 
+![infrasture.png](https://cos.goyak.io/images/infrasture.png)
 
- 
+  
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
 4.easystack 通过对kernel的裁剪，让内核更利于容器OS，并删除了initramfs的加载，这样容器OS在启动的时候就会更快，比官方了OS启动时间减少了30%～40%。通过以上的ostree的加载流程，我们只需要一个简单的initramfs文件系统，让kernel能找到真正ostree发布的根目录就可以。这里通过遍历grub2 配置文件的ostree信息就知道根分区在什么目录了。执行根分区挂载后，执行进程为1的程序，执行systemd启动就行。考虑到ostree的initramfs是ostree生成的，为了防止ostree会自动生成initramfs，在服务器端compose OS时添加generate_initramfs配置项，如果为否，就不让ostree生成initramfs。
 
  
 
- 
 
 5. 考虑到在client端， OS为存储两次commit用来做rollback，这样如果两次 commit差别很大，包括kenrel版本更新，或者branch被切换， client 的仓库就会显得非常庞大.  easystack 系统团队根据atomic系统的immutable架构开发了yak工具, 通过对接ostree接口实现了本地只保留一份当前OS数据，然后通过yak保存rollback的元数据文件，当需要rollback的时候根据rollback保存的源数据，记录包括基本的commit-id，请求需要安装的rpm等，然后通过
 
@@ -232,10 +183,8 @@ Enforcement类型是基于进程的规则，受限的容器进程默认svirt_lxc
 例如： 默认atomic 提供2个os version用来做rollback，yak只保留当前OS系统版本，需要回退时通过ostree接口以及保存的metadata数据通过源端接口直接合并成rollback的OS。等回退到旧的OS后，就可以删除当前的OS来节约空间。
 
 
+ ![post1-4.png](https://cos.goyak.io/images/post1-4.png)
 
-
-
- 
 
 
  
@@ -247,7 +196,7 @@ Enforcement类型是基于进程的规则，受限的容器进程默认svirt_lxc
 Yak:                   
 
 
-
+ ![post1-6.png](https://cos.goyak.io/images/post1-6.png)
 
 
 
@@ -261,17 +210,7 @@ Yak:
 
 
 
-
-
-
- 
-
-
- 
-
- 
-
- 
+ ![post1-7.png](https://cos.goyak.io/images/post1-7.png)
 
 6. 为了方便制作ostree container OS， easystack研发了制作工具escore-build，可以很方便的制作contianer OS. 可以通过git下载或rpm下载方式。安装好后，默认会安装在/opt/escore-build，进入目录可以调用make help查看有些什么方法提供。在atomic子目录有一个es-default.json, 用户可以修改里面的内容，包括需要制作OS所需要的包名，需要替换的文件，需要systemd启动的服务等。具体配置可参见https://rpm-ostree.readthedocs.io/en/latest/manual/treefile/，关于配置项的说明。
 
