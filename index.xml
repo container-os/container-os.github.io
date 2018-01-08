@@ -34,7 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cos.goyak.io/posts/container-os/</guid>
-      <description>Container OS 分析比较 hello 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应</description>
+      <description>Container OS 分析比较 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应用</description>
     </item>
     
     <item>
