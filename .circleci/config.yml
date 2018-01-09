@@ -7,6 +7,8 @@ jobs:
 
     steps:
       - checkout
+      - run: git submodule init
+      - run: git submodule update
       - run: git worktree add -B master public origin/master
       - run: apk --no-cache add python py2-yaml py2-requests
       - run: ./sync_external_docs
