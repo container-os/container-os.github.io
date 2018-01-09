@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version
+      - image: jojomi/hugo:latest
+
+    steps:
+      - checkout
+      - run: git worktree add -B master public origin/master
+      - run: apk --no-cache add python py2-yaml py2-requests
+      - run: ./sync_external_docs
+      - run: hugo
