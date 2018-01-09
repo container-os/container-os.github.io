@@ -7,9 +7,14 @@ jobs:
 
     steps:
       - checkout
+      - run: apk --no-cache add python py2-yaml py2-requests openssh-client
+      - run: mkdir -p ~/.ssh
+      - run: chmod 700 ~/.ssh
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run: git config --global user.email "ci@easystack.com"
+      - run: git config --global user.name "Easystack CI"
       - run: git submodule init
       - run: git submodule update
       - run: git worktree add -B master public origin/master
-      - run: apk --no-cache add python py2-yaml py2-requests
       - run: ./sync_external_docs
       - run: hugo
