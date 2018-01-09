@@ -2,7 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version
       - image: jojomi/hugo:latest
 
     steps:
@@ -18,3 +17,4 @@ jobs:
       - run: git worktree add -B master public origin/master
       - run: ./sync_external_docs
       - run: hugo
+      - run: cd public; git add . ; git commit -m "ci data update"; git push --force git@github.com:container-os/container-os.github.io.git HEAD:refs/heads/master
