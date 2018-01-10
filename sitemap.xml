@@ -51,7 +51,19 @@
   </url>
   
   <url>
+    <loc>https://cos.goyak.io/projects/busybox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/projects/ostree/</loc>
+  </url>
+  
+  <url>
     <loc>https://cos.goyak.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cos.goyak.io/projects/rpm-ostree/</loc>
   </url>
   
   <url>

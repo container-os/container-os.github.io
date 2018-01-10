@@ -34,6 +34,39 @@ Linux is a clone of the operating system Unix, written from scratch by Linus Tor
     </item>
     
     <item>
+      <title>busybox</title>
+      <link>https://cos.goyak.io/projects/busybox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/busybox/</guid>
+      <description>Please see the LICENSE file for details on copying and usage. Please refer to the INSTALL file for instructions on how to build.
+What is busybox:
+BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs, file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps, sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim.</description>
+    </item>
+    
+    <item>
+      <title>ostree</title>
+      <link>https://cos.goyak.io/projects/ostree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/ostree/</guid>
+      <description>libostree New! See the docs online at Read The Docs (OSTree)
+This project is now known as &amp;ldquo;libostree&amp;rdquo;, though it is still appropriate to use the previous name: &amp;ldquo;OSTree&amp;rdquo; (or &amp;ldquo;ostree&amp;rdquo;). The focus is on projects which use libostree&amp;rsquo;s shared library, rather than users directly invoking the command line tools (except for build systems). However, in most of the rest of the documentation, we will use the term &amp;ldquo;OSTree&amp;rdquo;, since it&amp;rsquo;s slightly shorter, and changing all documentation at once is impractical.</description>
+    </item>
+    
+    <item>
+      <title>rpm-ostree</title>
+      <link>https://cos.goyak.io/projects/rpm-ostree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/projects/rpm-ostree/</guid>
+      <description>rpm-ostree Overview rpm-ostree is a hybrid image/package system. It uses OSTree as a base image format, and supports RPM on both the client and server side using libdnf.
+For more information, see the online manual: Read The Docs (rpm-ostree)
+Features:
+ Atomic upgrades and rollback for host system updates A server side tool to consume RPMs and commit them to an OSTree repository A system daemon to consume OSTree commits as updates  Projects using rpm-ostree Project Atomic uses rpm-ostree to provide a minimal host for Docker formatted Linux containers.</description>
+    </item>
+    
+    <item>
       <title>yak: yak application keeper</title>
       <link>https://cos.goyak.io/projects/yak/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

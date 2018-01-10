@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Easystack container linux opensource  | Container-OS specific initramfs</title>
+    <title>Easystack container linux opensource  | rpm-ostree</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -22,12 +22,13 @@
 
     
 
-    <meta property="og:title" content="Container-OS specific initramfs" />
-<meta property="og:description" content="step1: init filesystem mkdir -p {dev,proc,run,sysroot,sys}
-step2: initramfs compress find -P . | grep -Ev &ldquo;.git|README.md&rdquo; |cpio -o -H newc|gzip &gt; ./initramfs.cpio.gz
-step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/" />
+    <meta property="og:title" content="rpm-ostree" />
+<meta property="og:description" content="rpm-ostree Overview rpm-ostree is a hybrid image/package system. It uses OSTree as a base image format, and supports RPM on both the client and server side using libdnf.
+For more information, see the online manual: Read The Docs (rpm-ostree)
+Features:
+ Atomic upgrades and rollback for host system updates A server side tool to consume RPMs and commit them to an OSTree repository A system daemon to consume OSTree commits as updates  Projects using rpm-ostree Project Atomic uses rpm-ostree to provide a minimal host for Docker formatted Linux containers." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cos.goyak.io/projects/initramfs/" />
+<meta property="og:url" content="https://cos.goyak.io/projects/rpm-ostree/" />
 
 
 
@@ -44,22 +45,24 @@ step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/" />
 
 
 
-<meta itemprop="name" content="Container-OS specific initramfs">
-<meta itemprop="description" content="step1: init filesystem mkdir -p {dev,proc,run,sysroot,sys}
-step2: initramfs compress find -P . | grep -Ev &ldquo;.git|README.md&rdquo; |cpio -o -H newc|gzip &gt; ./initramfs.cpio.gz
-step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/">
+<meta itemprop="name" content="rpm-ostree">
+<meta itemprop="description" content="rpm-ostree Overview rpm-ostree is a hybrid image/package system. It uses OSTree as a base image format, and supports RPM on both the client and server side using libdnf.
+For more information, see the online manual: Read The Docs (rpm-ostree)
+Features:
+ Atomic upgrades and rollback for host system updates A server side tool to consume RPMs and commit them to an OSTree repository A system daemon to consume OSTree commits as updates  Projects using rpm-ostree Project Atomic uses rpm-ostree to provide a minimal host for Docker formatted Linux containers.">
 
 
 
-<meta itemprop="wordCount" content="29">
+<meta itemprop="wordCount" content="110">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Container-OS specific initramfs"/>
-<meta name="twitter:description" content="step1: init filesystem mkdir -p {dev,proc,run,sysroot,sys}
-step2: initramfs compress find -P . | grep -Ev &ldquo;.git|README.md&rdquo; |cpio -o -H newc|gzip &gt; ./initramfs.cpio.gz
-step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="rpm-ostree"/>
+<meta name="twitter:description" content="rpm-ostree Overview rpm-ostree is a hybrid image/package system. It uses OSTree as a base image format, and supports RPM on both the client and server side using libdnf.
+For more information, see the online manual: Read The Docs (rpm-ostree)
+Features:
+ Atomic upgrades and rollback for host system updates A server side tool to consume RPMs and commit them to an OSTree repository A system daemon to consume OSTree commits as updates  Projects using rpm-ostree Project Atomic uses rpm-ostree to provide a minimal host for Docker formatted Linux containers."/>
 
   </head>
 
@@ -143,23 +146,38 @@ step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/"/>
           PROJECTS
         </p>
         <h1 class="f1">
-          Container-OS specific initramfs
+          rpm-ostree
         </h1>
       </header>
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         
 
-<h1 id="step1-init-filesystem">step1: init filesystem</h1>
+<h1 id="rpm-ostree-overview">rpm-ostree Overview</h1>
 
-<p>mkdir -p {dev,proc,run,sysroot,sys}</p>
+<p>rpm-ostree is a hybrid image/package system.  It uses
+<a href="https://ostree.readthedocs.io/en/latest/">OSTree</a> as a base image
+format, and supports RPM on both the client and server side using
+<a href="https://github.com/rpm-software-management/libdnf">libdnf</a>.</p>
 
-<h1 id="step2-initramfs-compress">step2: initramfs compress</h1>
+<p>For more information, see the online manual: <a href="https://rpm-ostree.readthedocs.org/en/latest/">Read The Docs (rpm-ostree)</a></p>
 
-<p>find -P . | grep -Ev &ldquo;.git|README.md&rdquo; |cpio -o -H newc|gzip &gt; ./initramfs.cpio.gz</p>
+<p><strong>Features:</strong></p>
 
-<h1 id="step3-replace-kernel-initramfs">step3: replace kernel initramfs</h1>
+<ul>
+<li>Atomic upgrades and rollback for host system updates</li>
+<li>A server side tool to consume RPMs and commit them to an OSTree repository</li>
+<li>A system daemon to consume OSTree commits as updates</li>
+</ul>
 
-<p>cp ./initramfs.cpio KERNEL/SOURCES/</p>
+<h2 id="projects-using-rpm-ostree">Projects using rpm-ostree</h2>
+
+<p><a href="http://www.projectatomic.io/">Project Atomic</a> uses rpm-ostree to
+provide a minimal host for Docker formatted Linux containers.
+Replicating a base immutable OS, then using Docker for applications.</p>
+
+<h2 id="manual">Manual</h2>
+
+<p>For more information, see the online manual: <a href="https://rpm-ostree.readthedocs.org/en/latest/">Read The Docs (rpm-ostree)</a></p>
 
       </div>
     </article>
@@ -180,7 +198,7 @@ step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/"/>
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/projects/initramfs/" class="link ph2 pv2 db black o-50">
+          <a href="/projects/initramfs/" class="link ph2 pv2 db black">
             Container-OS specific initramfs
           </a>
         </li>
@@ -208,7 +226,7 @@ step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/"/>
       
         <li class="list f5 w-100 hover-bg-white nl1">
           
-          <a href="/projects/rpm-ostree/" class="link ph2 pv2 db black">
+          <a href="/projects/rpm-ostree/" class="link ph2 pv2 db black o-50">
             rpm-ostree
           </a>
         </li>
