@@ -23,7 +23,12 @@
     
 
     <meta property="og:title" content="Easystack Container OS" />
-<meta property="og:description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模" />
+<meta property="og:description" content="深度剖析Easystack Container linux
+
+容器OS介绍：
+容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cos.goyak.io/posts/es-cos/" />
 
@@ -43,17 +48,27 @@
 
 
 <meta itemprop="name" content="Easystack Container OS">
-<meta itemprop="description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模">
+<meta itemprop="description" content="深度剖析Easystack Container linux
+
+容器OS介绍：
+容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
+
+">
 
 
 
-<meta itemprop="wordCount" content="7081">
+<meta itemprop="wordCount" content="7091">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Easystack Container OS"/>
-<meta name="twitter:description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模"/>
+<meta name="twitter:description" content="深度剖析Easystack Container linux
+
+容器OS介绍：
+容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
+
+"/>
 
   </head>
 
@@ -141,13 +156,14 @@
       </h1>
     </header>
     <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
-      
-
-<h1 id="深度剖析easystack-container-linux">深度剖析Easystack Container linux</h1>
+      <h1 id="深度剖析easystack-container-linux">深度剖析Easystack Container linux</h1>
 
 <p>容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
-我们先来看看目前主流的容器操作系统的一些特性。</p>
+容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。</p>
+
+<p></p>
+
+<p>我们先来看看目前主流的容器操作系统的一些特性。</p>
 
 <ol>
 <li><p>Core OS
@@ -203,13 +219,12 @@ atomic host是通过rpm包构建的轻量级操作系统,并支持‘原子’�
 <p>存储格式为：./92/919c27f64e4365010d7e97bfdd87dcaff23f8cf892f12a73855860e90a0356.commit。</p>
 
 <p>所有对象采用类似树型的结构组织起来的。 到这里我们基本知道了服务器端是如何存储OS文件目录内容了,这样每个OS部署版本会对应一个commit checksum值。 结构关系见图1。
-<img src="https://" alt="" />
-                              图1.</p>
+<img src="https://cos.goyak.io/images/post2-1.png" alt="post2-1.png" />
+                                 图1.</p>
 
-<p>在用户执行upgrade时，根据配置的remote repo URL地址，通过libsoup库执行读取<code>URL/config</code>文件，获取仓库存储OS方式<code>mode=archive-z2</code>(压缩)，<code>bare</code>(未压缩). 通过读取URL/summary文件得到最新仓库commit提交checksum值，通过在本地<code>repo/sysroot/ostree/repo</code>目录下查找对应commit类型的文件，如果没有找到就下载.commit文件并开始解析commit内容并反序列化得到contentchecksum和metadtachecksum，继续迭代寻找对应的dirtree类型，接而是dirmeta类型，然后是file（z）类型。如果在本地repo中没有找到就通过libsoup通过解析的checksum数据在<code>URL/objects</code> 目录下寻找并下载，经过反复的循环查找。最后都会将服务器端缺的object下载到本地repo中。这就是一种增量更新。因为很多时候不同的OS版本有相同的目录内容和文件内容。比如新版本可能只修改了部分/etc配置文件或更新了某些rpm包，这样就有可能相同的目录文件在不同的OS版本共用。通过这种方式一方面减小了系统的大小，另一方面让更新下载更快。例如，在server端有新的commit2可以用来做upgrade，而在client端当前的commit1已经包含了FILE1，DIRTREE2，那么在client端做upgrade时只需要更新COMMIT2,DIRMETA3,FILE2文件就可以了。详见图2。</p>
-
-<pre><code>                             图2.
-</code></pre>
+<p>在用户执行upgrade时，根据配置的remote repo URL地址，通过libsoup库执行读取<code>URL/config</code>文件，获取仓库存储OS方式<code>mode=archive-z2</code>(压缩)，<code>bare</code>(未压缩). 通过读取URL/summary文件得到最新仓库commit提交checksum值，通过在本地<code>repo/sysroot/ostree/repo</code>目录下查找对应commit类型的文件，如果没有找到就下载.commit文件并开始解析commit内容并反序列化得到contentchecksum和metadtachecksum，继续迭代寻找对应的dirtree类型，接而是dirmeta类型，然后是file（z）类型。如果在本地repo中没有找到就通过libsoup通过解析的checksum数据在<code>URL/objects</code> 目录下寻找并下载，经过反复的循环查找。最后都会将服务器端缺的object下载到本地repo中。这就是一种增量更新。因为很多时候不同的OS版本有相同的目录内容和文件内容。比如新版本可能只修改了部分/etc配置文件或更新了某些rpm包，这样就有可能相同的目录文件在不同的OS版本共用。通过这种方式一方面减小了系统的大小，另一方面让更新下载更快。例如，在server端有新的commit2可以用来做upgrade，而在client端当前的commit1已经包含了FILE1，DIRTREE2，那么在client端做upgrade时只需要更新COMMIT2,DIRMETA3,FILE2文件就可以了。详见图2。
+<img src="https://cos.goyak.io/images/post2-2.png" alt="post2-2.png" />
+                                 图2.</p>
 
 <p>Client repo对象更新后，然后就需要解析提交的commit repo将原始的文件目录结构反编译回来，通过函数<code>checkout_deployment_tree</code> 在本地创建<code>/ostree/deploy/OS-NAME/deploy/${commit-checksum}.${deployserial}</code>目录，并根据服务器存储逆向方法将序列化数据解析到对应的目录文件或目录。在这里因为<code>ostree/deploy</code>目录与系统目录是在同一个分区或LV中，所以只需要做hardlink指向就可以了。如果boot目录是单独分区，还需要拷贝vmlinuz到boot分区并更新<code>/boot/loader/entries</code>启动信息，最后调用grub2生成grub2.cfg。</p>
 
@@ -221,10 +236,9 @@ atomic host是通过rpm包构建的轻量级操作系统,并支持‘原子’�
 
 <p>Container linux启动与常规的发布操作系统内核启动有些不一样， 我们先看看常规的操作系统启动流程。 操作系统上电后，会首先通过加载存储在磁盘MBR中的bootloader(grub2)程序，然后grub2程序读取boot分区中的grub2.cfg配置文件找到启动项，grub2程序就可以根据配置文件中指定的linux内核文件路径进行内核加载。到这里linux内核开始接管系统。来看看内核是如何加载initramfs的。</p>
 
-<p>内核源码分析<code>start_kernel -&gt; kernel_init -&gt; kernel_init_freeable -&gt; do_basic_setup -&gt; do_initcalls</code>, 调用模块的初始化，initramfs模块通过<code>rootfs_initcall(populate_rootfs)</code> 注册。在<code>populate_rootfs</code>中会根据是否是builtin的initramfs，initrd还是initramfs，进行分别处理。首先会解压builtin的initramfs内容到<code>rootfs：unpack_to_rootfs(__initramfs_start, __initramfs_size)，__initramfs_start</code>和<code>__initramfs_end</code>是内核builtin initramfs映射到内存的开始和结束地址。然后会根据是否有外部initrd/initramfs文件进行判断。对于initrd或initramfs外部文件，会在前面<code>arch_init -&gt; relocate_initrd</code>根据bootloader加载<code>initrd/initramfs</code>到内存<code>ramdisk_image</code>地址的内容进行重新布局维护然后更新到地址<code>initrd_start</code>。然后在<code>populate_rootfs</code> 中进行解压，先按照initramfs方式进行解压，如果无法解压就会尝试initrd方法处理，先直接将内存中的内容写到<code>/initrd.img</code>文件。如果前面是initramfs并解压成功就会直接执行其中的<code>/init</code>文件。如果是initrd文件，在接下来<code>prepare_namespace -&gt; initrd_load</code> 中， 会创建<code>/dev/ram0</code>设备，并且将前面存在<code>/initrd.image</code>文件通过<code>rd_load_image</code>加载到ram0中。如果<code>/dev/ram0</code>被指定为系统真正的根文件系统，直接执行<code>/sbin/init</code>文件。 如果<code>/dev/ram0</code>不是根文件系统，将会执行<code>/linuxrc</code>文件，根据linuxrc脚本信息<code>umount initrd</code>并mount真正的root根文件系统，最后执行<code>/sbin/init</code>文件。如果在builtin initramfs中没有提供<code>/init</code>(默认kernel没有提供)和在bootloader中没有提供外部initrd和initramfs文件的话，会在<code>prepare_namespace -&gt; mount_root</code>最后直接<code>mount root=</code>指定的分区进行挂载, 执行<code>/init</code>脚本。流程可参考图3.</p>
-
-<pre><code>                             图3.
-</code></pre>
+<p>内核源码分析<code>start_kernel -&gt; kernel_init -&gt; kernel_init_freeable -&gt; do_basic_setup -&gt; do_initcalls</code>, 调用模块的初始化，initramfs模块通过<code>rootfs_initcall(populate_rootfs)</code> 注册。在<code>populate_rootfs</code>中会根据是否是builtin的initramfs，initrd还是initramfs，进行分别处理。首先会解压builtin的initramfs内容到<code>rootfs：unpack_to_rootfs(__initramfs_start, __initramfs_size)，__initramfs_start</code>和<code>__initramfs_end</code>是内核builtin initramfs映射到内存的开始和结束地址。然后会根据是否有外部initrd/initramfs文件进行判断。对于initrd或initramfs外部文件，会在前面<code>arch_init -&gt; relocate_initrd</code>根据bootloader加载<code>initrd/initramfs</code>到内存<code>ramdisk_image</code>地址的内容进行重新布局维护然后更新到地址<code>initrd_start</code>。然后在<code>populate_rootfs</code> 中进行解压，先按照initramfs方式进行解压，如果无法解压就会尝试initrd方法处理，先直接将内存中的内容写到<code>/initrd.img</code>文件。如果前面是initramfs并解压成功就会直接执行其中的<code>/init</code>文件。如果是initrd文件，在接下来<code>prepare_namespace -&gt; initrd_load</code> 中， 会创建<code>/dev/ram0</code>设备，并且将前面存在<code>/initrd.image</code>文件通过<code>rd_load_image</code>加载到ram0中。如果<code>/dev/ram0</code>被指定为系统真正的根文件系统，直接执行<code>/sbin/init</code>文件。 如果<code>/dev/ram0</code>不是根文件系统，将会执行<code>/linuxrc</code>文件，根据linuxrc脚本信息<code>umount initrd</code>并mount真正的root根文件系统，最后执行<code>/sbin/init</code>文件。如果在builtin initramfs中没有提供<code>/init</code>(默认kernel没有提供)和在bootloader中没有提供外部initrd和initramfs文件的话，会在<code>prepare_namespace -&gt; mount_root</code>最后直接<code>mount root=</code>指定的分区进行挂载, 执行<code>/init</code>脚本。流程可参考图3.
+<img src="https://cos.goyak.io/images/post2-3.png" alt="post2-3.png" />
+                                 图3.</p>
 
 <p>容器OS系统启动流程分析：</p>
 
@@ -247,17 +261,15 @@ version 2
 
 <p>真正的root ostree把它隐藏在ostree=参数下。在这里我们看到目录是<code>/ostree/boot.1/escore-lite-host/86ebea26b5a15a7d0ce676c5a6cb5949a356f262660cf7aaf92614d6f4cef852/0, boot.1</code>这里是软连接，最后指向的是<code>/ostree/deploy/escore-lite-host/deploy/86ebea26b5a15a7d0ce676c5a6cb5949a356f262660cf7aaf92614d6f4cef852/0</code>, 这这里escore-lite-host是OS的名字，86ebea为OS部署版本checksum值，0为部署序号。在initramfs的阶段就需要将这个目录作为root挂载。</p>
 
-<p>再来看看执行挂载步骤：首先通过<code>mount /proc</code>分区并读取<code>/proc/cmdline</code>，得到<code>ostree=</code> 参数。通过<code>resolve_deploy_path</code>获取绝对路径并<code>chdir</code>到目录中，先将<code>../../var</code> mount到当前的var目录（这里解释一下，var目录对于相同OS name的版本是共用的，因为var目录存储的都是可变数据，并不需要在ostree repo中管理）。然后将usr目录作为readonly的方式remount. 最后<code>switch_root</code>将当前ostree deploy目录作为root并执行<code>/sbin/init</code>并将源系统根目录切换到<code>/sysroot</code>下。这里涉及到的文件列表件图4.</p>
-
-<pre><code>                            图4.
-</code></pre>
+<p>再来看看执行挂载步骤：首先通过<code>mount /proc</code>分区并读取<code>/proc/cmdline</code>，得到<code>ostree=</code> 参数。通过<code>resolve_deploy_path</code>获取绝对路径并<code>chdir</code>到目录中，先将<code>../../var</code> mount到当前的var目录（这里解释一下，var目录对于相同OS name的版本是共用的，因为var目录存储的都是可变数据，并不需要在ostree repo中管理）。然后将usr目录作为readonly的方式remount. 最后<code>switch_root</code>将当前ostree deploy目录作为root并执行<code>/sbin/init</code>并将源系统根目录切换到<code>/sysroot</code>下。这里涉及到的文件列表件图4.
+<img src="https://cos.goyak.io/images/post2-4.png" alt="post2-4.png" />
+                                图4.</p>
 
 <p>到这里container linux启动流程已经分析完毕。</p>
 
 <p>作者简介：</p>
 
 <p>陈帆，多年内核虚拟化开发经验，涉及qemu，libvirt，kvm，xen，openstack-nova，gpu等，2016年加入easystack就职于系统工程团队，解决内核以及虚拟化相关问题，并主要担当easystack container linux OS调研设计开发工作。</p>
-
     </div>
   </article>
   </div>
