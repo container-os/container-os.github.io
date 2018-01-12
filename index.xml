@@ -86,6 +86,15 @@ Linux专门为提高容器效率而定制，使其成为云环境的kubenetes/Do
     </item>
     
     <item>
+      <title>building Container OS</title>
+      <link>https://cos.goyak.io/posts/build-container-os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cos.goyak.io/posts/build-container-os/</guid>
+      <description>build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机</description>
+    </item>
+    
+    <item>
       <title>busybox</title>
       <link>https://cos.goyak.io/projects/busybox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

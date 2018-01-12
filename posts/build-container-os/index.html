@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Easystack container linux opensource  | building Container OS</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.32.4" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://cos.goyak.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="building Container OS" />
+<meta property="og:description" content="build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cos.goyak.io/posts/build-container-os/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="building Container OS">
+<meta itemprop="description" content="build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机">
+
+
+
+<meta itemprop="wordCount" content="2060">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="building Container OS"/>
+<meta name="twitter:description" content="build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://cos.goyak.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Easystack container linux opensource
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contribute/" title="Contribute page">
+              Contribute
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+  <a href="https://github.com/container-os/" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="mw8 center">
+  <article class="cf pa3 pa4-m pa4-l">
+    <header>
+      <p class="f6 b helvetica tracked">
+        POSTS
+      </p>
+      <h1 class="f1">
+        building Container OS
+      </h1>
+    </header>
+    <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      
+
+<hr />
+
+<h1 id="build-easystack-container-linux"><strong>build easystack container linux</strong></h1>
+
+<p>Escore-build是一个编译包和创建contianer linux的自主研发的工具集。
+注意：如果在kvm虚机中安装，需要配置虚机内存大于2G，否则可能最后制作image时因为内存不足而失败。</p>
+
+<h1 id="1-安装escore-build工具">1. 安装Escore-build工具</h1>
+
+<p>安装Escore-build时需要重新配置yum 源，所以在此之前，有一些工具包可以先安装上：
+    yum install -y createrepo       用于创建yum源本地仓库</p>
+
+<p>（1）由于我们的escore系统中存在已经安装的三个包(libsemanage,
+cyrus-sasl-lib,policycoreutils)与rpm-ostree-toolbox所需的依赖包冲突(仅仅是三个包的后缀名有所不同)，所以需要先将系统中的包卸载，重新安装上所需包。
+先到如下地址分别下载这三个rpm包到本地(可以用wget命令直接下载)：
+    <a href="http://mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/Packages/libsemanage-2.5-5.1.el7.centos.es.x86_64.rpm">http://mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/Packages/libsemanage-2.5-5.1.el7.centos.es.x86_64.rpm</a>
+    <a href="http://mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/Packages/policycoreutils-2.5-11.el7.centos.es.x86_64.rpm">http://mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/Packages/policycoreutils-2.5-11.el7.centos.es.x86_64.rpm</a>
+    <a href="http://mirror.easystack.io/ESCL/vault.es/7.3.1611/os/x86_64/Packages/cyrus-sasl-lib-2.1.26-20.el7.centos.es.x86_64.rpm">http://mirror.easystack.io/ESCL/vault.es/7.3.1611/os/x86_64/Packages/cyrus-sasl-lib-2.1.26-20.el7.centos.es.x86_64.rpm</a>
+分别卸载escore系统中原来的三个包：
+    rpm -e  libsemanage –nodeps
+    rpm -e cyrus-sasl-lib –nodeps
+    rpm -e policycoreutils –nodeps
+最后安装下载下来的三个包：
+    rpm -ivh libsemanage-2.5-5.1.el7.centos.es.x86_64.rpm
+    rpm -ivh cyrus-sasl-lib-2.1.26-20.el7.centos.es.x86_64.rpm
+    rpm -ivh policycoreutils-2.5-11.el7.centos.es.x86_64.rpm</p>
+
+<p>（2）安装Escore-build之前，需要先配置yum源：
+    vi /etc/yum.repos.d/CentOS-Base.repo
+修改为如下内容：
+[base]
+name=CentOS-$releasever - Base
+baseurl=<a href="http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/os/x86_64/">http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/os/x86_64/</a>
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</p>
+
+<p>[updates]
+name=CentOS-$releasever - Updates
+baseurl=<a href="http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/">http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/updates/x86_64/</a>
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</p>
+
+<p>[extras]
+name=CentOS-$releasever - Extras
+baseurl=<a href="http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/extras/x86_64/">http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/extras/x86_64/</a>
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</p>
+
+<p>[atomic]
+name=CentOS-$releasever - Atomic
+baseurl=<a href="http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/atomic/x86_64/">http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/atomic/x86_64/</a>
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</p>
+
+<p>[easystack]
+name=CentOS-$releasever - Easystack
+baseurl=<a href="http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/easystack/x86_64/">http://escore:escore@mirror.easystack.io/ESCL/vault.es/7.3.1611/easystack/x86_64/</a>
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</p>
+
+<p>[outatomic]
+name=CentOS-$releasever - Outatomic
+baseurl=<a href="http://mirror.easystack.io/ESCL/7.3.1611/atomic/x86_64/">http://mirror.easystack.io/ESCL/7.3.1611/atomic/x86_64/</a>
+gpgcheck=0</p>
+
+<p>保存后，更新yum的cache：
+    yum clean all   清除cache
+    yum makecache       重新加载cache，提高搜索效率</p>
+
+<p>（3）最后安装上escore-build：
+    yum install -y escore-build
+escore-build文件一般会在/opt/ostree/目录下</p>
+
+<p>（4）最后制作image时会需要一个基础包net-tools，这里先安装上：
+    yum install -y net-tools</p>
+
+<h1 id="2-container-os-的源创建">2. Container OS 的源创建</h1>
+
+<p>Container OS 主要是由一系列的rpm包组成，因此默认我们提供repo源，包含
+Escore-os，escore-update, escore-easystack,escore-extras &hellip;, 参见escore-build的atomic目录下的.repo文件。这些repo也是我们escloud-linux 用的源。
+但是我们可能需要添加额外的源，比如k8s更新。
+（1）需要先建立本地yum源仓库：
+    这里在根目录下mkdir k8s_update，
+    copy 所有rpm包到该目录下，
+    最后createrepo k8s_update，
+成功会产生repodata目录，该目录下有repomd.xml文件自动创建索引信息。
+每次更新k8s_update目录下的rpm包后，需要createrepo –update k8s_update.</p>
+
+<p>（2）设置好yum源本地仓库后再到escore-build/atomic 目录下添加
+K8s-update.repo文件：
+[k8s-update]
+name=ESCore-7 - k8s-update
+baseurl=<a href="ftp://127.0.0.1/k8s_update/">ftp://127.0.0.1/k8s_update/</a>
+enabled=1
+gpgcheck=0
+注意：请保证repo文件名与repo名相同，便于观察。</p>
+
+<p>（3）最后需要在atomic/es-default.json文件中修改repos 项，添加k8s-update. 如：
+ &ldquo;repos&rdquo;: [&ldquo;escore-os&rdquo;, &ldquo;escore-updates&rdquo;, &ldquo;escore-easystack&rdquo;,
+          &ldquo;escore-extras&rdquo;, &ldquo;escore-atomic&rdquo;, &ldquo;k8s-update&rdquo;],</p>
+
+<h1 id="3-创建contianer-linux-仓库">3.创建contianer linux 仓库</h1>
+
+<p>Container linux的仓库类似与git仓库，但他是用来存储OS的。通过以上repo的修改，我们就需要创建我们自己的commit。默认我们的repo 路径在/srv/ostree, repo 名叫es-atomic-host。Refs默认是 es-atomic-host/7/x86_64/standard， 这里refs相当于git的branch(分支)。
+有时我们需要创建一个test的branch，方便测试。我们可以修改 escore-build 目录下的envrc 文件（从envrc.example拷贝）。比如修改为：
+OSTREE_REPO_REF = es-atomic-host/7/x86_64/yuzhun_test
+（1）envrc文件相关配置含义：
+    OSTREE_REPO指定OSTree仓库的根目录，默认在/srv/ostree/目录下；
+    OSTREE_REPO_NAME 定义仓库名，默认为es-atomic-host；
+    OSTREE_REPO_REF 指定分支目录，默认 /es-atomic-host/7/x86_64/standard；
+    OSTREE_SERV_HOST 指定主机IP，默认为192.168.122.1，如果是在虚机中则需要更改IP为当前虚机的实际IP地址；
+    OSTREE_SERV_PORT 指定端口；
+当需要对以上配置修改时就需要将相关地方的注释符#取消，不做任何修改时使用默认配置，也就不需要copy envrc.example。
+（2）如果是在虚机中，需要先配置虚机的CPU模式为host-passthrough模式，该模式直接将物理CPU暴露给虚拟机使用，在虚拟机上完全可以看到的就是物理CPU的型号。
+在主机上虚机配置文件一般在/etc/libvirt/qemu/**.xml， 找到该虚机配置信息
+    <cpu mode='custom' match='exact'><br />
+        <model fallback='allow'>IvyBridge</model>
+    </cpu>
+部分，将该部分修改为<cpu mode='host-passthrough'/>
+再执行virsh define **.xml  定义域使文件生效；
+最后虚机中执行：
+    modprobe -r kvm_intel<br />
+    modprobe kvm_intel nested=1
+卸载掉kvm_intel重新装，否则在虚机中跑会非常耗时。
+（3）然后执行make atomic_compose 将rpm 打包成OS并提交。等执行完后，会发现commit成功的。如果需要覆盖原来的commit可以使用：
+    make atomic_compose ARGS=&ndash;force-nocache。</p>
+
+<h1 id="4-创建image">4.创建image</h1>
+
+<p>有了以上的commit后，就可以通过这个commit来生成image。默认会按最新的commit生成image。
+一般需要先重启(开启)docker：
+    systemctl restart docker
+关闭防火墙：systemctl stop firewalld.service
+接着执行make atomic_prepare_image_dir （仅第一次时需要）
+最后make atomic_image 就可以了。
+最终可以看到生成的qcow2镜像文件所在目录类似如下：
+Created: /srv/ostree/es-atomic-host/images/disk_171127-01/images/es-atomic-host-7.qcow2</p>
+
+    </div>
+  </article>
+  </div>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+    <div>
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cos.goyak.io/" >
+        &copy; 2018 Easystack container linux opensource
+      </a>
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://easystack.cn">
+        Project sponsored by EasyStack Inc.
+      </a>
+  </div>
+  
+
+
+
+
+
+
+
+  <a href="https://github.com/container-os/" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://cos.goyak.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>
