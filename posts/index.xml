@@ -2,43 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Easystack container linux opensource</title>
-    <link>https://cos.goyak.io/posts/</link>
+    <link>https://container-os.github.io/posts/</link>
     <description>Recent content in Posts on Easystack container linux opensource</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://cos.goyak.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://container-os.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Container OS Quickview</title>
-      <link>https://cos.goyak.io/posts/container-os/</link>
+      <link>https://container-os.github.io/posts/container-os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/container-os/</guid>
+      <guid>https://container-os.github.io/posts/container-os/</guid>
       <description>Container OS 分析比较 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应用</description>
     </item>
     
     <item>
       <title>Easystack Container OS</title>
-      <link>https://cos.goyak.io/posts/es-cos/</link>
+      <link>https://container-os.github.io/posts/es-cos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/es-cos/</guid>
-      <description>&lt;h1 id=&#34;深度剖析easystack-container-linux&#34;&gt;深度剖析Easystack Container linux&lt;/h1&gt;
-
-&lt;p&gt;容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://container-os.github.io/posts/es-cos/</guid>
+      <description>深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模</description>
     </item>
     
     <item>
       <title>building Container OS</title>
-      <link>https://cos.goyak.io/posts/build-container-os/</link>
+      <link>https://container-os.github.io/posts/build-container-os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/build-container-os/</guid>
+      <guid>https://container-os.github.io/posts/build-container-os/</guid>
       <description>build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机</description>
     </item>
     

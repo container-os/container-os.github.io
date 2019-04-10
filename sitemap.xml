@@ -3,75 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cos.goyak.io/contribute/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/categories/</loc>
+    <loc>https://container-os.github.io/contribute/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/posts/container-os/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/projects/initramfs/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/projects/linux-kernel/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/posts/es-cos/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cos.goyak.io/</loc>
+    <loc>https://container-os.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/posts/</loc>
+    <loc>https://container-os.github.io/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/posts/container-os/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/projects/initramfs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/projects/linux-kernel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/posts/es-cos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/tags/</loc>
+    <loc>https://container-os.github.io/posts/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/posts/build-container-os/</loc>
+    <loc>https://container-os.github.io/tags/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/projects/busybox/</loc>
+    <loc>https://container-os.github.io/posts/build-container-os/</loc>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/projects/ostree/</loc>
+    <loc>https://container-os.github.io/projects/busybox/</loc>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/projects/</loc>
+    <loc>https://container-os.github.io/projects/ostree/</loc>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/projects/rpm-ostree/</loc>
+    <loc>https://container-os.github.io/projects/</loc>
   </url>
   
   <url>
-    <loc>https://cos.goyak.io/projects/yak/</loc>
+    <loc>https://container-os.github.io/projects/rpm-ostree/</loc>
+  </url>
+  
+  <url>
+    <loc>https://container-os.github.io/projects/yak/</loc>
   </url>
   
 </urlset>

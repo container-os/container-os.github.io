@@ -9,13 +9,13 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     
 
-    <link href='https://cos.goyak.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://container-os.github.io/dist/main.css' rel='stylesheet' type="text/css" />
     
       
     
@@ -23,43 +23,24 @@
     
 
     <meta property="og:title" content="busybox" />
-<meta property="og:description" content="Please see the LICENSE file for details on copying and usage. Please refer to the INSTALL file for instructions on how to build.
-What is busybox:
-BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs, file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps, sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim." />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cos.goyak.io/projects/busybox/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://container-os.github.io/projects/busybox/" />
 
 
 <meta itemprop="name" content="busybox">
-<meta itemprop="description" content="Please see the LICENSE file for details on copying and usage. Please refer to the INSTALL file for instructions on how to build.
-What is busybox:
-BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs, file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps, sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim.">
+<meta itemprop="description" content="">
 
 
 
-<meta itemprop="wordCount" content="1299">
+<meta itemprop="wordCount" content="0">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="busybox"/>
-<meta name="twitter:description" content="Please see the LICENSE file for details on copying and usage. Please refer to the INSTALL file for instructions on how to build.
-What is busybox:
-BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs, file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps, sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="busybox"/>
+<meta name="twitter:description" content=""/>
 
   </head>
 
@@ -71,7 +52,7 @@ BusyBox combines tiny versions of many common UNIX utilities into a single small
     <div class="bg-navy">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="https://cos.goyak.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="https://container-os.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
       Easystack container linux opensource
     </a>
     <div class="flex-l items-center">
@@ -147,218 +128,7 @@ BusyBox combines tiny versions of many common UNIX utilities into a single small
         </h1>
       </header>
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
-        <p>Please see the LICENSE file for details on copying and usage.
-Please refer to the INSTALL file for instructions on how to build.</p>
-
-<p>What is busybox:</p>
-
-<p>BusyBox combines tiny versions of many common UNIX utilities into a single
-  small executable.  It provides minimalist replacements for most of the
-  utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs,
-  file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps,
-  sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim.  The utilities
-  in BusyBox often have fewer options than their full-featured cousins;
-  however, the options that are included provide the expected functionality
-  and behave very much like their larger counterparts.</p>
-
-<p>BusyBox has been written with size-optimization and limited resources in
-  mind, both to produce small binaries and to reduce run-time memory usage.
-  Busybox is also extremely modular so you can easily include or exclude
-  commands (or features) at compile time.  This makes it easy to customize
-  embedded systems; to create a working system, just add /dev, /etc, and a
-  Linux kernel.  Busybox (usually together with uClibc) has also been used as
-  a component of &ldquo;thin client&rdquo; desktop systems, live-CD distributions, rescue
-  disks, installers, and so on.</p>
-
-<p>BusyBox provides a fairly complete POSIX environment for any small system,
-  both embedded environments and more full featured systems concerned about
-  space.  Busybox is slowly working towards implementing the full Single Unix
-  Specification V3 (<a href="http://www.opengroup.org/onlinepubs/009695399/">http://www.opengroup.org/onlinepubs/009695399/</a>), but isn&rsquo;t
-  there yet (and for size reasons will probably support at most UTF-8 for
-  internationalization).  We are also interested in passing the Linux Test
-  Project (<a href="http://ltp.sourceforge.net">http://ltp.sourceforge.net</a>).</p>
-
-<hr />
-
-<p>Using busybox:</p>
-
-<p>BusyBox is extremely configurable.  This allows you to include only the
-  components and options you need, thereby reducing binary size.  Run &lsquo;make
-  config&rsquo; or &lsquo;make menuconfig&rsquo; to select the functionality that you wish to
-  enable.  (See &lsquo;make help&rsquo; for more commands.)</p>
-
-<p>The behavior of busybox is determined by the name it&rsquo;s called under: as
-  &ldquo;cp&rdquo; it behaves like cp, as &ldquo;sed&rdquo; it behaves like sed, and so on.  Called
-  as &ldquo;busybox&rdquo; it takes the second argument as the name of the applet to
-  run (I.E. &ldquo;./busybox ls -l /proc&rdquo;).</p>
-
-<p>The &ldquo;standalone shell&rdquo; mode is an easy way to try out busybox; this is a
-  command shell that calls the built-in applets without needing them to be
-  installed in the path.  (Note that this requires /proc to be mounted, if
-  testing from a boot floppy or in a chroot environment.)</p>
-
-<p>The build automatically generates a file &ldquo;busybox.links&rdquo;, which is used by
-  &lsquo;make install&rsquo; to create symlinks to the BusyBox binary for all compiled in
-  commands.  This uses the CONFIG_PREFIX environment variable to specify
-  where to install, and installs hardlinks or symlinks depending
-  on the configuration preferences.  (You can also manually run
-  the install script at &ldquo;applets/install.sh&rdquo;).</p>
-
-<hr />
-
-<p>Downloading the current source code:</p>
-
-<p>Source for the latest released version, as well as daily snapshots, can always
-  be downloaded from</p>
-
-<pre><code>http://busybox.net/downloads/
-</code></pre>
-
-<p>You can browse the up to the minute source code and change history online.</p>
-
-<pre><code>http://git.busybox.net/busybox/
-</code></pre>
-
-<p>Anonymous GIT access is available.  For instructions, check out:</p>
-
-<pre><code>http://www.busybox.net/source.html
-</code></pre>
-
-<p>For those that are actively contributing and would like to check files in,
-  see:</p>
-
-<pre><code>http://busybox.net/developer.html
-</code></pre>
-
-<p>The developers also have a bug and patch tracking system
-  (<a href="https://bugs.busybox.net">https://bugs.busybox.net</a>) although posting a bug/patch to the mailing list
-  is generally a faster way of getting it fixed, and the complete archive of
-  what happened is the git changelog.</p>
-
-<p>Note: if you want to compile busybox in a busybox environment you must
-  select CONFIG_DESKTOP.</p>
-
-<hr />
-
-<p>Getting help:</p>
-
-<p>when you find you need help, you can check out the busybox mailing list
-  archives at <a href="http://busybox.net/lists/busybox/">http://busybox.net/lists/busybox/</a> or even join
-  the mailing list if you are interested.</p>
-
-<hr />
-
-<p>Bugs:</p>
-
-<p>if you find bugs, please submit a detailed bug report to the busybox mailing
-  list at busybox@busybox.net.  a well-written bug report should include a
-  transcript of a shell session that demonstrates the bad behavior and enables
-  anyone else to duplicate the bug on their own machine. the following is such
-  an example:</p>
-
-<pre><code>to: busybox@busybox.net
-from: diligent@testing.linux.org
-subject: /bin/date doesn't work
-
-package: busybox
-version: 1.00
-
-when i execute busybox 'date' it produces unexpected results.
-with gnu date i get the following output:
-
-$ date
-fri oct  8 14:19:41 mdt 2004
-
-but when i use busybox date i get this instead:
-
-$ date
-illegal instruction
-
-i am using debian unstable, kernel version 2.4.25-vrs2 on a netwinder,
-and the latest uclibc from cvs.
-
--diligent
-</code></pre>
-
-<p>note the careful description and use of examples showing not only what
-  busybox does, but also a counter example showing what an equivalent app
-  does (or pointing to the text of a relevant standard).  Bug reports lacking
-  such detail may never be fixed&hellip;  Thanks for understanding.</p>
-
-<hr />
-
-<p>Portability:</p>
-
-<p>Busybox is developed and tested on Linux 2.4 and 2.6 kernels, compiled
-  with gcc (the unit-at-a-time optimizations in version 3.4 and later are
-  worth upgrading to get, but older versions should work), and linked against
-  uClibc (0.9.27 or greater) or glibc (2.2 or greater).  In such an
-  environment, the full set of busybox features should work, and if
-  anything doesn&rsquo;t we want to know about it so we can fix it.</p>
-
-<p>There are many other environments out there, in which busybox may build
-  and run just fine.  We just don&rsquo;t test them.  Since busybox consists of a
-  large number of more or less independent applets, portability is a question
-  of which features work where.  Some busybox applets (such as cat and rm) are
-  highly portable and likely to work just about anywhere, while others (such as
-  insmod and losetup) require recent Linux kernels with recent C libraries.</p>
-
-<p>Earlier versions of Linux and glibc may or may not work, for any given
-  configuration.  Linux 2.2 or earlier should mostly work (there&rsquo;s still
-  some support code in things like mount.c) but this is no longer regularly
-  tested, and inherently won&rsquo;t support certain features (such as long files
-  and &ndash;bind mounts).  The same is true for glibc 2.0 and 2.1: expect a higher
-  testing and debugging burden using such old infrastructure.  (The busybox
-  developers are not very interested in supporting these older versions, but
-  will probably accept small self-contained patches to fix simple problems.)</p>
-
-<p>Some environments are not recommended.  Early versions of uClibc were buggy
-  and missing many features: upgrade.  Linking against libc5 or dietlibc is
-  not supported and not interesting to the busybox developers.  (The first is
-  obsolete and has no known size or feature advantages over uClibc, the second
-  has known bugs that its developers have actively refused to fix.)  Ancient
-  Linux kernels (2.0.x and earlier) are similarly uninteresting.</p>
-
-<p>In theory it&rsquo;s possible to use Busybox under other operating systems (such as
-  MacOS X, Solaris, Cygwin, or the BSD Fork Du Jour).  This generally involves
-  a different kernel and a different C library at the same time.  While it
-  should be possible to port the majority of the code to work in one of
-  these environments, don&rsquo;t be surprised if it doesn&rsquo;t work out of the box.  If
-  you&rsquo;re into that sort of thing, start small (selecting just a few applets)
-  and work your way up.</p>
-
-<p>In 2005 Shaun Jackman has ported busybox to a combination of newlib
-  and libgloss, and some of his patches have been integrated.</p>
-
-<p>Supported hardware:</p>
-
-<p>BusyBox in general will build on any architecture supported by gcc.  We
-  support both 32 and 64 bit platforms, and both big and little endian
-  systems.</p>
-
-<p>Under 2.4 Linux kernels, kernel module loading was implemented in a
-  platform-specific manner.  Busybox&rsquo;s insmod utility has been reported to
-  work under ARM, CRIS, H8/300, x86, ia64, x86_64, m68k, MIPS, PowerPC, S390,
-  SH3/4/5, Sparc, and v850e.  Anything else probably won&rsquo;t work.</p>
-
-<p>The module loading mechanism for the 2.6 kernel is much more generic, and
-  we believe 2.6.x kernel module loading support should work on all
-  architectures supported by the kernel.</p>
-
-<hr />
-
-<p>Please feed suggestions, bug reports, insults, and bribes back to the busybox
-mailing list:</p>
-
-<pre><code>busybox@busybox.net
-</code></pre>
-
-<p>and/or maintainer:</p>
-
-<pre><code>Denys Vlasenko
-&lt;vda.linux@googlemail.com&gt;
-</code></pre>
-
+        
       </div>
     </article>
     <aside class="ph3 mt2 mt6-ns">
@@ -429,8 +199,8 @@ mailing list:</p>
     <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
     <div>
-      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cos.goyak.io/" >
-        &copy; 2018 Easystack container linux opensource
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://container-os.github.io/" >
+        &copy; 2019 Easystack container linux opensource
       </a>
       <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://easystack.cn">
         Project sponsored by EasyStack Inc.
@@ -455,7 +225,7 @@ mailing list:</p>
   </div>
 </footer>
 
-    <script src="https://cos.goyak.io/dist/app.bundle.js" async></script>
+    <script src="https://container-os.github.io/dist/app.bundle.js" async></script>
 
   </body>
 </html>

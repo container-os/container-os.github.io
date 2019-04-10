@@ -9,13 +9,13 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.56.0-DEV" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     
 
-    <link href='https://cos.goyak.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://container-os.github.io/dist/main.css' rel='stylesheet' type="text/css" />
     
       
     
@@ -23,37 +23,13 @@
     
 
     <meta property="og:title" content="Easystack Container OS" />
-<meta property="og:description" content="深度剖析Easystack Container linux
-
-容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
-
-" />
+<meta property="og:description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cos.goyak.io/posts/es-cos/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://container-os.github.io/posts/es-cos/" />
 
 
 <meta itemprop="name" content="Easystack Container OS">
-<meta itemprop="description" content="深度剖析Easystack Container linux
-
-容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
-
-">
+<meta itemprop="description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模">
 
 
 
@@ -62,13 +38,9 @@
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Easystack Container OS"/>
-<meta name="twitter:description" content="深度剖析Easystack Container linux
-
-容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
-
-"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Easystack Container OS"/>
+<meta name="twitter:description" content="深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模"/>
 
   </head>
 
@@ -80,7 +52,7 @@
     <div class="bg-navy">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="https://cos.goyak.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="https://container-os.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
       Easystack container linux opensource
     </a>
     <div class="flex-l items-center">
@@ -156,14 +128,13 @@
       </h1>
     </header>
     <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
-      <h1 id="深度剖析easystack-container-linux">深度剖析Easystack Container linux</h1>
+      
+
+<h1 id="深度剖析easystack-container-linux">深度剖析Easystack Container linux</h1>
 
 <p>容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。</p>
-
-<p></p>
-
-<p>我们先来看看目前主流的容器操作系统的一些特性。</p>
+容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。
+我们先来看看目前主流的容器操作系统的一些特性。</p>
 
 <ol>
 <li><p>Core OS
@@ -270,6 +241,7 @@ version 2
 <p>作者简介：</p>
 
 <p>陈帆，多年内核虚拟化开发经验，涉及qemu，libvirt，kvm，xen，openstack-nova，gpu等，2016年加入easystack就职于系统工程团队，解决内核以及虚拟化相关问题，并主要担当easystack container linux OS调研设计开发工作。</p>
+
     </div>
   </article>
   </div>
@@ -278,8 +250,8 @@ version 2
     <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
     <div>
-      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cos.goyak.io/" >
-        &copy; 2018 Easystack container linux opensource
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://container-os.github.io/" >
+        &copy; 2019 Easystack container linux opensource
       </a>
       <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://easystack.cn">
         Project sponsored by EasyStack Inc.
@@ -304,7 +276,7 @@ version 2
   </div>
 </footer>
 
-    <script src="https://cos.goyak.io/dist/app.bundle.js" async></script>
+    <script src="https://container-os.github.io/dist/app.bundle.js" async></script>
 
   </body>
 </html>

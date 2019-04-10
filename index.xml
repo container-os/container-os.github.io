@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Easystack container linux opensource</title>
-    <link>https://cos.goyak.io/</link>
+    <link>https://container-os.github.io/</link>
     <description>Recent content on Easystack container linux opensource</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://cos.goyak.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://container-os.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://cos.goyak.io/contribute/</link>
+      <link>https://container-os.github.io/contribute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/contribute/</guid>
+      <guid>https://container-os.github.io/contribute/</guid>
       <description>Contribute to Container-OS! We welcome all contributions.
 Fork the repos from github. https://github.com/container-os/
 Please use github pull request to send us your patch. Or use git send-email to send your patch.
@@ -24,10 +24,10 @@ Please use github pull request to send us your patch. Or use git send-email to s
     
     <item>
       <title>Contact</title>
-      <link>https://cos.goyak.io/contact/</link>
+      <link>https://container-os.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/contact/</guid>
+      <guid>https://container-os.github.io/contact/</guid>
       <description> Contact us via irc. freenode #container-os If you prefer to use web and mobile client, we recommend you to use riot.im to connect our irc channel.
 Or use traditional web client #container-os
 Send email to us Your Name Email Address An email address is required.  Message   </description>
@@ -35,19 +35,19 @@ Send email to us Your Name Email Address An email address is required.  Message 
     
     <item>
       <title>Container OS Quickview</title>
-      <link>https://cos.goyak.io/posts/container-os/</link>
+      <link>https://container-os.github.io/posts/container-os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/container-os/</guid>
+      <guid>https://container-os.github.io/posts/container-os/</guid>
       <description>Container OS 分析比较 容器技术在很多年前已经在内核中实现，随着docker以及集群工具swarm, kubernetes的出现，简化了大规模部署容器应用</description>
     </item>
     
     <item>
       <title>Container-OS specific initramfs</title>
-      <link>https://cos.goyak.io/projects/initramfs/</link>
+      <link>https://container-os.github.io/projects/initramfs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/initramfs/</guid>
+      <guid>https://container-os.github.io/projects/initramfs/</guid>
       <description>step1: init filesystem mkdir -p {dev,proc,run,sysroot,sys}
 step2: initramfs compress find -P . | grep -Ev &amp;ldquo;.git|README.md&amp;rdquo; |cpio -o -H newc|gzip &amp;gt; ./initramfs.cpio.gz
 step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/</description>
@@ -55,93 +55,80 @@ step3: replace kernel initramfs cp ./initramfs.cpio KERNEL/SOURCES/</description
     
     <item>
       <title>Container-OS specific kernel</title>
-      <link>https://cos.goyak.io/projects/linux-kernel/</link>
+      <link>https://container-os.github.io/projects/linux-kernel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/linux-kernel/</guid>
-      <description>Linux kernel release 4.x http://kernel.org/
-These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
+      <guid>https://container-os.github.io/projects/linux-kernel/</guid>
+      <description>Linux kernel release 4.x &amp;lt;http://kernel.org/&amp;gt;  These are the release notes for Linux version 4. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.
 WHAT IS LINUX?
-Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.</description>
+Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net.</description>
     </item>
     
     <item>
       <title>Easystack Container OS</title>
-      <link>https://cos.goyak.io/posts/es-cos/</link>
+      <link>https://container-os.github.io/posts/es-cos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/es-cos/</guid>
-      <description>&lt;h1 id=&#34;深度剖析easystack-container-linux&#34;&gt;深度剖析Easystack Container linux&lt;/h1&gt;
-
-&lt;p&gt;容器OS介绍：
-容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模部署容器应用的难度, 现在企业都可以自行给客户部署容器应用并且需求越来越大, 传统的操作系统针对部署容器又显得太厚重,container OS正是瞄准大量部署容器而生的轻量级操作系统。面对 container OS 的强烈需求,多家系统厂商都趁此机会纷纷的都推出了自己的 container OS 版本。easystack也基于开源atomic host项目研发了自己的容器操作系统Easystack Container linux。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://container-os.github.io/posts/es-cos/</guid>
+      <description>深度剖析Easystack Container linux 容器OS介绍： 容 器 技 术 在 很 多 年 前 已 经 在 内 核 中 实 现 ,随 着 docker 以 及 集 群 工 具 swarm, kubernetes的出现,简化了大规模</description>
     </item>
     
     <item>
       <title>Easystack container Linux</title>
-      <link>https://cos.goyak.io/about/</link>
+      <link>https://container-os.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/about/</guid>
+      <guid>https://container-os.github.io/about/</guid>
       <description>&lt;p&gt;easystack container Linux是一款基于原子项目Project Atomic的轻量级容器操作系统，
 主要目标是面向云平台的虚拟机操作系统。easystack container linux是以ESCloud Linux为基础设计的，
 不仅继承了ESCloud Linux的高效性和稳定性，而且相对普通虚拟机采用更精简的kernel内核和更丰富的系统工具，
 使系统运行更快，更高效。完全继承了atomic的本身的特性，包括快速部署和OS版本升级回退。 easystack container
-Linux专门为提高容器效率而定制，使其成为云环境的kubenetes/Docker运行环境的最佳选择。
-&lt;/p&gt;</description>
+Linux专门为提高容器效率而定制，使其成为云环境的kubenetes/Docker运行环境的最佳选择。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>building Container OS</title>
-      <link>https://cos.goyak.io/posts/build-container-os/</link>
+      <link>https://container-os.github.io/posts/build-container-os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/posts/build-container-os/</guid>
+      <guid>https://container-os.github.io/posts/build-container-os/</guid>
       <description>build easystack container linux Escore-build是一个编译包和创建contianer linux的自主研发的工具集。 注意：如果在kvm虚机中安装，需要配置虚机</description>
     </item>
     
     <item>
       <title>busybox</title>
-      <link>https://cos.goyak.io/projects/busybox/</link>
+      <link>https://container-os.github.io/projects/busybox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/busybox/</guid>
-      <description>Please see the LICENSE file for details on copying and usage. Please refer to the INSTALL file for instructions on how to build.
-What is busybox:
-BusyBox combines tiny versions of many common UNIX utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in bzip2, coreutils, dhcp, diffutils, e2fsprogs, file, findutils, gawk, grep, inetutils, less, modutils, net-tools, procps, sed, shadow, sysklogd, sysvinit, tar, util-linux, and vim.</description>
+      <guid>https://container-os.github.io/projects/busybox/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>ostree</title>
-      <link>https://cos.goyak.io/projects/ostree/</link>
+      <link>https://container-os.github.io/projects/ostree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/ostree/</guid>
-      <description>libostree New! See the docs online at Read The Docs (OSTree)
-This project is now known as &amp;ldquo;libostree&amp;rdquo;, though it is still appropriate to use the previous name: &amp;ldquo;OSTree&amp;rdquo; (or &amp;ldquo;ostree&amp;rdquo;). The focus is on projects which use libostree&amp;rsquo;s shared library, rather than users directly invoking the command line tools (except for build systems). However, in most of the rest of the documentation, we will use the term &amp;ldquo;OSTree&amp;rdquo;, since it&amp;rsquo;s slightly shorter, and changing all documentation at once is impractical.</description>
+      <guid>https://container-os.github.io/projects/ostree/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>rpm-ostree</title>
-      <link>https://cos.goyak.io/projects/rpm-ostree/</link>
+      <link>https://container-os.github.io/projects/rpm-ostree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/rpm-ostree/</guid>
-      <description>rpm-ostree Overview rpm-ostree is a hybrid image/package system. It uses OSTree as a base image format, and supports RPM on both the client and server side using libdnf.
-For more information, see the online manual: Read The Docs (rpm-ostree)
-Features:
- Atomic upgrades and rollback for host system updates A server side tool to consume RPMs and commit them to an OSTree repository A system daemon to consume OSTree commits as updates  Projects using rpm-ostree Project Atomic uses rpm-ostree to provide a minimal host for Docker formatted Linux containers.</description>
+      <guid>https://container-os.github.io/projects/rpm-ostree/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>yak: yak application keeper</title>
-      <link>https://cos.goyak.io/projects/yak/</link>
+      <link>https://container-os.github.io/projects/yak/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cos.goyak.io/projects/yak/</guid>
-      <description>Welcome to my blog with some of my work in progress. I&amp;rsquo;ve been working on this book idea. You can read some of the chapters below.</description>
+      <guid>https://container-os.github.io/projects/yak/</guid>
+      <description>hello yak Image主的解决方案没有乡异性问题, 然而这类方案通常并没有配置的弹性. 如何操作该应用也必须透过阅读README后才能理解. yak希望可</description>
     </item>
     
   </channel>
