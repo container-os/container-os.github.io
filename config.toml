@@ -1,4 +1,4 @@
-baseURL = "https://cos.goyak.io/"
+baseURL = "https://container-os.github.io/"
 languageCode = "en-us"
 title = "Easystack container linux opensource"
 theme = "es-ananke"
